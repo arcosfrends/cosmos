@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cosmos · 소속 플랫폼 데모">
+<meta property="og:description" content="흩어진 사람들이 링크로 이어져 하나의 우주가 되는 곳. 비밀번호로 체험해 보세요.">
+<meta property="og:image" content="https://arcosfrends.github.io/cosmos/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://arcosfrends.github.io/cosmos/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="흩어진 사람들이 링크로 이어져 하나의 우주가 되는 곳.">
+<title>cosmos · 데모</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Caprasimo:wght@400&family=Figtree:wght@400;600;700&display=swap');
+:root{--color-bg:#f5ead8;--color-surface:#ebddc5;--color-text:#201e1d;--color-accent:#c67139;--color-accent-2:#7a8a5e;--color-divider:color-mix(in srgb,#201e1d 16%,transparent);
+--color-neutral-100:#f9f4ed;--color-neutral-200:#eee7db;--color-neutral-300:#dcd3c4;--color-neutral-400:#c0b6a5;--color-neutral-500:#a19786;--color-neutral-600:#82796a;--color-neutral-700:#645c50;--color-neutral-800:#474238;--color-neutral-900:#2e2b25;
+--color-accent-100:#fff2eb;--color-accent-200:#ffe1d0;--color-accent-300:#ffc6a5;--color-accent-400:#f6a06b;--color-accent-500:#d67f48;--color-accent-600:#b2622d;--color-accent-700:#8c491a;--color-accent-800:#643312;--color-accent-900:#402310;
+--color-accent-2-100:#f0fae1;--color-accent-2-200:#e1eecc;--color-accent-2-300:#ccdbb2;--color-accent-2-400:#aebf92;--color-accent-2-500:#8fa073;--color-accent-2-600:#728157;--color-accent-2-700:#56633f;--color-accent-2-800:#3d472b;--color-accent-2-900:#272e1b;
+--font-heading:"Caprasimo",system-ui,sans-serif;--font-heading-weight:400;--font-body:"Figtree",system-ui,sans-serif;
+--space-1:4.4px;--space-2:8.8px;--space-3:13.2px;--space-4:17.6px;--space-6:26.4px;--space-8:35.2px;--radius-sm:8px;--radius-md:16px;--radius-lg:28px;
+--shadow-sm:0 1px 2px color-mix(in srgb,#2e2b25 14%,transparent);--shadow-md:0 3px 10px color-mix(in srgb,#2e2b25 16%,transparent);--shadow-lg:0 12px 32px color-mix(in srgb,#2e2b25 22%,transparent)}
+body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-size:15px;line-height:1.55;font-weight:400}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:var(--font-heading-weight);line-height:1.12;letter-spacing:-.015em;margin:0 0 var(--space-2)}
+h1{font-size:42px}h2{font-size:32px}h3{font-size:25px}h4{font-size:20px}h5{font-size:16px}h6{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+p{margin:0 0 var(--space-3)}a{color:var(--color-accent);text-underline-offset:3px}img{display:block;max-width:100%}
+:focus{outline:none}:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:color-mix(in srgb,var(--color-accent) 30%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;text-decoration:none;font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:14px;line-height:1.2;color:var(--color-text);background:transparent;border:1px solid transparent;padding:var(--space-2) calc(var(--space-3)*1.2);border-radius:var(--radius-md)}
+.btn svg{display:block}.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-primary{background:var(--color-accent);color:var(--color-bg)}.btn-primary:hover{background:var(--color-accent-600)}.btn-primary:active{background:var(--color-accent-700)}
+.btn-secondary{border-color:var(--color-divider)}.btn-secondary:hover{background:color-mix(in srgb,var(--color-text) 7%,transparent)}.btn-secondary:active{background:color-mix(in srgb,var(--color-text) 14%,transparent)}
+.btn-ghost{color:var(--color-accent);padding-inline:var(--space-1)}.btn-ghost:hover{background:color-mix(in srgb,var(--color-accent) 10%,transparent)}.btn-ghost:active{background:color-mix(in srgb,var(--color-accent) 18%,transparent)}
+.btn-icon{width:36px;height:36px;padding:0}.btn-block{width:100%;margin-top:var(--space-2)}
+.input{width:100%;min-height:36px;padding:6px 10px;font:inherit;font-size:14px;color:var(--color-text);caret-color:var(--color-accent);background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-md)}
+.input:hover{border-color:color-mix(in srgb,var(--color-text) 45%,transparent)}.input:focus-visible{border-color:var(--color-accent);outline-offset:0}
+textarea.input{min-height:90px;resize:vertical}
+.card{display:flex;flex-direction:column;gap:var(--space-2);padding:var(--space-3);border-radius:var(--radius-md);background:var(--color-surface)}
+.tag{display:inline-flex;align-items:center;font-size:11px;letter-spacing:.02em;padding:3px 10px;border-radius:calc(var(--radius-md)*.75)}
+.tag-accent{background:var(--color-accent-100);color:var(--color-accent-800)}.tag-accent-2{background:var(--color-accent-2-100);color:var(--color-accent-2-800)}.tag-neutral{background:var(--color-neutral-100);color:var(--color-neutral-800)}.tag-outline{border:1px solid var(--color-accent);color:var(--color-accent)}
+.elev-sm{box-shadow:var(--shadow-sm)}.elev-md{box-shadow:var(--shadow-md)}.elev-lg{box-shadow:var(--shadow-lg)}
+.card,.dialog{border-radius:calc(var(--radius-lg)*1.15)}
+.btn,.tag,.seg,.input{border-radius:999px}
+.input{padding-inline:14px}
+</style>
+<style>body{margin:0;background:var(--color-neutral-200)}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes wfade{from{opacity:0}to{opacity:1}}@keyframes wblink{0%,100%{opacity:1}50%{opacity:.35}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<template id="dc-tpl">
+
+<div style="min-height:100vh;display:flex;justify-content:center;align-items:center;padding:12px;font-family:var(--font-body);color:var(--color-text)">
+
+<div style="zoom:var(--ps,1);flex:none;width:390px;height:812px;border-radius:48px;background:var(--color-bg);border:8px solid var(--color-neutral-900);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-lg)">
+<div style="flex:none;display:flex;justify-content:space-between;padding:14px 26px 4px;font-size:13px;font-weight:700;position:relative;z-index:3;color:{{ statusColor }}"><span>9:41</span><span>5G 100%</span></div>
+
+<sc-if value="{{ is.onb }}" hint-placeholder-val="{{ true }}">
+<div style="position:absolute;z-index:2;inset:0;background:var(--color-bg);display:flex;flex-direction:column;padding:70px 28px 34px;overflow:hidden">
+<div style="position:absolute;width:320px;height:320px;border-radius:50%;background:var(--color-accent-200);right:-120px;top:40px"></div>
+<div style="position:absolute;width:190px;height:190px;border-radius:50%;background:var(--color-accent-2-200);left:-70px;top:290px"></div>
+<div style="position:relative;display:flex;flex-direction:column;flex:1">
+<span class="tag tag-accent" style="align-self:flex-start">초대장이 도착했어요</span>
+<h1 style="font-size:38px;margin:18px 0 12px">민지가 당신을<br>‘경영 08’에<br>불렀어요</h1>
+<p style="font-size:15px;color:var(--color-neutral-800);margin:0 0 28px">이미 아는 얼굴 12명이 기다리고 있어요. 들어오면 동문 소식과 모임이 한 곳에 모여요.</p>
+<div style="display:flex;align-items:center;margin-bottom:24px">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--color-accent-300);color:var(--color-accent-900);display:grid;place-items:center;font-family:var(--font-heading);font-size:22px;border:3px solid var(--color-bg)">민</div>
+<div style="width:56px;height:56px;border-radius:50%;background:var(--color-accent-2-400);color:var(--color-accent-2-900);display:grid;place-items:center;font-family:var(--font-heading);font-size:22px;border:3px solid var(--color-bg);margin-left:-14px">서</div>
+<div style="width:56px;height:56px;border-radius:50%;background:var(--color-neutral-300);color:var(--color-neutral-900);display:grid;place-items:center;font-family:var(--font-heading);font-size:22px;border:3px solid var(--color-bg);margin-left:-14px">준</div>
+<div style="width:56px;height:56px;border-radius:50%;background:var(--color-text);color:var(--color-bg);display:grid;place-items:center;font-weight:700;font-size:14px;border:3px solid var(--color-bg);margin-left:-14px">+9</div>
+</div>
+<div class="card" style="background:var(--color-neutral-100);flex-direction:row;align-items:center;gap:14px;padding:16px">
+<div style="width:48px;height:48px;border-radius:50%;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:15px">08</div>
+<div style="flex:1"><div style="font-weight:700;font-size:15px">연세 경영 08 동문회</div><div style="font-size:12px;color:var(--color-neutral-700)">멤버 128명 · 이번 달 모임 2개</div></div>
+</div>
+<div style="flex:1"></div>
+<button class="btn btn-primary" onClick="{{ accept }}" style="width:100%;padding:16px;font-size:16px">초대 수락하고 들어가기</button>
+<button class="btn btn-ghost" onClick="{{ acceptMore }}" style="width:100%;margin-top:8px;color:var(--color-accent-700)">다른 소속도 함께 연결할래요</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ hasBack }}" hint-placeholder-val="{{ false }}">
+<div style="flex:none;display:flex;align-items:center;gap:10px;padding:6px 16px 10px">
+<button onClick="{{ back }}" style="width:38px;height:38px;border-radius:50%;border:none;background:var(--color-neutral-100);display:grid;place-items:center;cursor:pointer;color:var(--color-text)" style-hover="background:var(--color-neutral-300)">{{ i.left }}</button>
+<div style="font-weight:700;font-size:15px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ backTitle }}</div>
+</div>
+</sc-if>
+
+<div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;position:relative">
+
+<!-- HOME -->
+<sc-if value="{{ is.home }}" hint-placeholder-val="{{ false }}">
+<div style="padding-bottom:24px">
+<div style="display:flex;align-items:center;gap:8px;padding:8px 20px 12px"><div style="font-family:var(--font-heading);font-size:24px;flex:1">우리끼리</div><button class="btn btn-icon btn-secondary" onClick="{{ goFind }}">{{ i.search }}</button><button class="btn btn-icon btn-secondary" onClick="{{ openPrivacy }}" aria-label="공개 범위 설정">{{ i.shield }}</button><button class="btn btn-icon btn-secondary" onClick="{{ bell }}">{{ i.bell }}</button></div>
+<div onClick="{{ openCard }}" style="margin:0 20px;padding:18px;border-radius:28px;background:var(--color-accent);color:var(--color-bg);position:relative;overflow:hidden;cursor:pointer">
+<div style="position:absolute;width:140px;height:140px;border-radius:50%;background:var(--color-accent-400);right:-40px;top:-50px"></div>
+<div style="position:relative;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;letter-spacing:.1em;opacity:.9">MY MEMBERSHIP · GOLD</span><div style="width:44px;height:44px;border-radius:50%;background:{{ me.bg }};color:{{ me.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:17px;border:2px solid var(--color-bg);overflow:hidden">{{ me.i }}</div></div>
+<div style="position:relative;font-family:var(--font-heading);font-size:24px;margin:6px 0 2px">정우진</div>
+<div style="position:relative;display:flex;justify-content:space-between;font-size:12px"><span>No. 0412 · 소속 {{ groupCount }}곳</span><span style="font-weight:700">카드 보기 ›</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 20px 10px"><div style="font-family:var(--font-heading);font-size:18px">내 소속 지도 · {{ groupCount }}곳</div><span onClick="{{ goGroups }}" style="font-size:12px;color:var(--color-accent-700);font-weight:600;cursor:pointer">전체 ›</span></div>
+<div style="display:flex;gap:14px;padding:4px 20px;overflow-x:auto;scrollbar-width:none">
+<sc-for list="{{ groupList }}" as="g" hint-placeholder-count="4">
+<div onClick="{{ g.open }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;width:112px;flex:none;cursor:pointer;padding:14px 8px 12px;border-radius:26px;background:var(--color-neutral-100)">
+<div style="width:58px;height:58px;border-radius:50%;background:{{ g.bg }};color:{{ g.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:15px;box-shadow:0 0 0 2px var(--color-bg),0 0 0 4px {{ g.ring }}">{{ g.short }}</div>
+<div style="font-size:12px;font-weight:700;white-space:nowrap">{{ g.label }}</div><div style="font-size:10px;color:var(--color-neutral-700);white-space:nowrap">아는 사람 {{ g.known }}명</div>
+</div>
+</sc-for>
+</div>
+<button onClick="{{ connect }}" style="display:flex;justify-content:space-between;align-items:center;width:calc(100% - 40px);margin:12px 20px 0;padding:12px 16px;border-radius:999px;border:1.5px dashed var(--color-accent-400);background:none;color:var(--color-accent-800);font:600 13px var(--font-body);cursor:pointer"><span>끊어진 소속 찾기 · 학교, 직장, 동네</span><span>+ 추가</span></button>
+<div onClick="{{ openWeb }}" role="button" tabindex="0" style="margin:14px 20px 0;border-radius:28px;overflow:hidden;background:#241B14;color:#F6EBD9;cursor:pointer;display:flex;align-items:center">
+<div style="width:120px;height:96px;flex:none">{{ webTeaser.art }}</div>
+<div style="flex:1;padding:0 16px 0 4px;line-height:1.35"><div style="font-family:var(--font-heading);font-size:17px">내 연결망</div><div style="font-size:11.5px;opacity:.82;margin-top:2px">{{ webTeaser.sub }}</div><div style="font-size:11px;font-weight:700;color:#F2C879;margin-top:6px">거미줄 따라가 보기 ›</div></div>
+</div>
+<div onClick="{{ nextEvent.open }}" style="margin:16px 20px 0;padding:14px 16px;border-radius:24px;background:var(--color-accent-2-300);color:var(--color-accent-2-900);display:flex;align-items:center;gap:14px;cursor:pointer">
+<div style="font-family:var(--font-heading);font-size:34px;line-height:1">{{ nextEvent.d }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-size:11px;font-weight:600">다가오는 모임 · {{ nextEvent.m }} {{ nextEvent.dow }} {{ nextEvent.time }}</div><div style="font-weight:700;font-size:14px">{{ nextEvent.title }}</div></div>
+<span style="font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--color-bg);color:var(--color-text)">{{ nextEvent.status }}</span>
+</div>
+<div style="padding:18px 20px 8px;font-family:var(--font-heading);font-size:18px">소식</div>
+<div style="padding:0 20px;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ homeFeed }}" as="f" hint-placeholder-count="3">
+<div class="card" style="background:var(--color-neutral-100);padding:16px;gap:10px">
+<div style="display:flex;align-items:center;gap:10px"><div onClick="{{ f.openWho }}" style="width:34px;height:34px;border-radius:50%;background:{{ f.bg }};color:{{ f.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:14px;cursor:pointer">{{ f.i }}</div><div style="flex:1;line-height:1.25"><div style="font-weight:700;font-size:14px">{{ f.who }}</div><div onClick="{{ f.openGroup }}" style="font-size:11px;color:var(--color-neutral-700);cursor:pointer">{{ f.group }} · {{ f.time }}</div></div></div>
+<div style="font-size:14px;line-height:1.5">{{ f.text }}</div>
+<sc-if value="{{ f.img }}" hint-placeholder-val="{{ false }}"><div style="height:150px;border-radius:20px;overflow:hidden">{{ f.photo }}</div></sc-if>
+<div style="display:flex;gap:16px;font-size:12px"><button onClick="{{ f.like }}" style="display:flex;gap:5px;align-items:center;border:none;background:none;padding:0;cursor:pointer;font:600 12px var(--font-body);color:{{ f.likeC }}">{{ f.heart }} {{ f.likes }}</button><span style="display:flex;gap:5px;align-items:center;color:var(--color-neutral-700)">{{ i.msgS }} {{ f.cm }}</span></div>
+</div>
+</sc-for>
+</div>
+<div onClick="{{ goCard }}" style="margin:14px 20px 0;padding:11px 16px;border-radius:999px;background:var(--color-accent-2-100);color:var(--color-accent-2-800);font-size:12px;display:flex;justify-content:space-between;cursor:pointer"><span>이번 주 회원 혜택 3개</span><span>›</span></div>
+</div>
+</sc-if>
+
+<!-- GROUPS ROOT -->
+<sc-if value="{{ is.groups }}" hint-placeholder-val="{{ false }}">
+<div style="padding:8px 20px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><h3 style="margin:0">내 소속</h3><button class="btn btn-ghost" onClick="{{ openStyle }}" style="padding:7px 10px;font-size:12px;margin-left:auto;margin-right:6px">썸네일 꾸미기</button><button class="btn btn-secondary" onClick="{{ connect }}" style="padding:7px 14px;font-size:13px">+ 소속 연결</button></div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ groupList }}" as="g" hint-placeholder-count="4">
+<div onClick="{{ g.open }}" style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:28px;background:var(--color-neutral-100);cursor:pointer" style-hover="background:var(--color-neutral-300)">
+<div style="width:52px;height:52px;flex:none;border-radius:50%;background:{{ g.bg }};color:{{ g.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:15px">{{ g.short }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:15px">{{ g.name }}</div><div style="font-size:12px;color:var(--color-neutral-700)">멤버 {{ g.members }} · 아는 사람 {{ g.known }}명</div></div>
+<span style="font-size:11px;font-weight:700;color:var(--color-accent-700)">{{ g.newTxt }}</span>
+</div>
+</sc-for>
+</div>
+<div style="font-family:var(--font-heading);font-size:18px;margin:24px 0 10px">이번 달 모임</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ eventList }}" as="e" hint-placeholder-count="4">
+<div onClick="{{ e.open }}" style="display:flex;gap:14px;align-items:center;padding:12px;border-radius:24px;background:var(--color-neutral-100);cursor:pointer" style-hover="background:var(--color-neutral-300)">
+<div style="width:54px;height:54px;flex:none;border-radius:50%;background:{{ e.bg }};color:{{ e.fg }};display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;position:relative;overflow:hidden"><div style="position:absolute;inset:0">{{ e.thumb }}</div><span style="position:relative;font-family:var(--font-heading);font-size:20px;color:{{ e.tc }};text-shadow:{{ e.ts }}">{{ e.d }}</span><span style="position:relative;font-size:10px;color:{{ e.tc }};text-shadow:{{ e.ts }}">{{ e.dow }}</span></div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ e.title }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ e.where }} · {{ e.time }}</div><div style="font-size:11px;color:var(--color-accent-700);font-weight:600">아는 사람 {{ e.knownN }}명</div></div>
+<span style="font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;background:{{ e.stBg }};color:{{ e.stFg }}">{{ e.status }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<!-- GROUP DETAIL -->
+<sc-if value="{{ is.group }}" hint-placeholder-val="{{ false }}">
+<div style="padding-bottom:90px">
+<div style="height:130px;margin:0 16px;border-radius:28px;overflow:hidden">{{ grp.cover }}</div>
+<div style="padding:0 24px;margin-top:-30px;position:relative">
+<div style="width:62px;height:62px;border-radius:50%;background:{{ grp.bg }};color:{{ grp.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:18px;border:4px solid var(--color-bg)">{{ grp.short }}</div>
+<h3 style="margin:10px 0 2px">{{ grp.name }}</h3>
+<div style="font-size:12px;color:var(--color-neutral-700)">멤버 {{ grp.members }} · 아는 사람 {{ grp.known }}명 · {{ grp.region }}</div>
+</div>
+<div style="display:flex;gap:6px;padding:16px 20px 12px">
+<sc-for list="{{ gtabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.go }}" style="padding:8px 14px;border-radius:999px;border:none;cursor:pointer;font:600 13px var(--font-body);background:{{ t.bg }};color:{{ t.fg }}">{{ t.l }}</button></sc-for>
+</div>
+<div style="padding:0 20px;display:flex;flex-direction:column;gap:10px">
+<sc-if value="{{ gt.feed }}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{ groupFeed }}" as="f" hint-placeholder-count="2">
+<div class="card" style="background:var(--color-neutral-100);padding:16px;gap:10px">
+<div style="display:flex;align-items:center;gap:10px"><div onClick="{{ f.openWho }}" style="width:34px;height:34px;border-radius:50%;background:{{ f.bg }};color:{{ f.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:14px;cursor:pointer">{{ f.i }}</div><div style="flex:1;line-height:1.25"><div style="font-weight:700;font-size:14px">{{ f.who }}</div><div style="font-size:11px;color:var(--color-neutral-700)">{{ f.time }}</div></div></div>
+<div style="font-size:14px;line-height:1.5">{{ f.text }}</div>
+<sc-if value="{{ f.img }}" hint-placeholder-val="{{ false }}"><div style="height:150px;border-radius:20px;overflow:hidden">{{ f.photo }}</div></sc-if>
+<div style="display:flex;gap:16px"><button onClick="{{ f.like }}" style="display:flex;gap:5px;align-items:center;border:none;background:none;padding:0;cursor:pointer;font:600 12px var(--font-body);color:{{ f.likeC }}">{{ f.heart }} {{ f.likes }}</button><span style="display:flex;gap:5px;align-items:center;font-size:12px;color:var(--color-neutral-700)">{{ i.msgS }} {{ f.cm }}</span></div>
+</div>
+</sc-for>
+<sc-if value="{{ groupFeedEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:30px;text-align:center;font-size:13px;color:var(--color-neutral-700)">아직 글이 없어요. 첫 소식을 남겨보세요.</div></sc-if>
+</sc-if>
+<sc-if value="{{ gt.members }}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{ groupMembers }}" as="p" hint-placeholder-count="3">
+<div onClick="{{ p.open }}" style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:22px;cursor:pointer" style-hover="background:var(--color-neutral-100)">
+<div style="width:46px;height:46px;flex:none;border-radius:50%;background:{{ p.bg }};color:{{ p.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:17px">{{ p.i }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ p.n }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ p.role }}</div><div style="font-size:11px;color:var(--color-accent-700);font-weight:600">{{ p.viaTxt }}</div></div>
+</div>
+</sc-for>
+</sc-if>
+<sc-if value="{{ gt.events }}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{ groupEvents }}" as="e" hint-placeholder-count="1">
+<div onClick="{{ e.open }}" style="border-radius:28px;background:var(--color-accent-2-300);color:var(--color-accent-2-900);padding:18px;cursor:pointer">
+<div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:var(--font-heading);font-size:40px;line-height:1">{{ e.d }}</span><span style="font-size:12px;font-weight:600">{{ e.m }} {{ e.dow }} · {{ e.time }}</span></div>
+<div style="font-family:var(--font-heading);font-size:19px;margin:8px 0 2px">{{ e.title }}</div>
+<div style="font-size:12px">{{ e.where }} · {{ e.status }}</div>
+</div>
+</sc-for>
+</sc-if>
+<sc-if value="{{ gt.perks }}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{ groupDeals }}" as="d" hint-placeholder-count="2">
+<div style="display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:24px;background:var(--color-neutral-100)">
+<div style="width:44px;height:44px;flex:none;border-radius:50%;background:var(--color-accent-200);color:var(--color-accent-800);display:grid;place-items:center;font-family:var(--font-heading);font-size:13px">{{ d.pct }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ d.t }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ d.s }}</div></div>
+</div>
+</sc-for>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<!-- FIND -->
+<sc-if value="{{ is.find }}" hint-placeholder-val="{{ false }}">
+<div style="padding:8px 20px 24px">
+<sc-if value="{{ fx.notice.on }}" hint-placeholder-val="{{ true }}"><div style="display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:8px 8px 8px 12px;border-radius:999px;background:var(--color-accent-2-300);color:var(--color-accent-2-900);font-size:12px;animation:fade .4s ease"><span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:999px;background:var(--color-text);color:var(--color-bg);flex:none">광고</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">{{ fx.notice.t }}</span><button onClick="{{ fx.notice.close }}" aria-label="알림 닫기" style="width:26px;height:26px;border-radius:50%;border:none;background:rgba(255,255,255,.55);cursor:pointer;color:inherit;font:700 13px var(--font-body);line-height:1;flex:none">×</button></div></sc-if>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h3 style="margin:0">누구를 찾을까요?</h3><button class="btn btn-ghost" onClick="{{ openStyle }}" style="padding:7px 10px;font-size:12px">썸네일 꾸미기</button></div>
+<div style="display:flex;align-items:center;gap:8px;padding:0 16px;border-radius:999px;background:var(--color-neutral-100);color:var(--color-neutral-600)">{{ i.search }}<input value="{{ q }}" onChange="{{ onQ }}" placeholder="이름, 회사, 직무로 검색" style="flex:1;border:none;background:transparent;padding:13px 0;font:14px var(--font-body);color:var(--color-text);outline:none"></div>
+<div style="display:flex;margin:12px 0 0;padding:3px;border-radius:999px;background:var(--color-neutral-100)"><sc-for list="{{ fx.seg }}" as="c" hint-placeholder-count="2"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="flex:1;padding:8px 0;border-radius:999px;border:none;cursor:pointer;font:600 13px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="display:flex;gap:6px;margin:12px 0 6px;flex-wrap:wrap"><sc-for list="{{ fx.sortChips }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="padding:7px 12px;border-radius:999px;border:none;cursor:pointer;font:600 12px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="font-size:11px;color:var(--color-neutral-700);margin:8px 0 6px;display:flex;gap:4px;align-items:center">{{ i.pinS }} 지역</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ regionChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.go }}" style="padding:7px 13px;border-radius:999px;cursor:pointer;font:600 12px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="font-size:11px;color:var(--color-neutral-700);margin:12px 0 6px;display:flex;gap:4px;align-items:center">{{ i.bagS }} 업종</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ indChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.go }}" style="padding:7px 13px;border-radius:999px;cursor:pointer;font:600 12px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<sc-if value="{{ fx.banner.on }}" hint-placeholder-val="{{ false }}"><div onClick="{{ fx.banner.go }}" role="button" tabindex="0" style="display:flex;align-items:center;gap:10px;margin-top:12px;padding:12px 14px;border-radius:22px;border:1px solid var(--color-divider);background:var(--color-neutral-100);cursor:pointer;animation:up .3s ease"><span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:999px;background:var(--color-text);color:var(--color-bg);flex:none">광고</span><div style="flex:1;min-width:0;line-height:1.35"><div style="font-weight:700;font-size:13px">{{ fx.banner.t }}</div><div style="font-size:11px;color:var(--color-neutral-700)">{{ fx.banner.s }}</div></div><span style="font-size:16px;color:var(--color-neutral-600)">›</span></div></sc-if>
+<sc-if value="{{ mapOn }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;height:250px;margin-top:14px;border-radius:28px;overflow:hidden;border:1px solid var(--color-divider);animation:fade .35s ease">
+<div style="position:absolute;inset:0">{{ mp.el }}</div>
+<div style="position:absolute;left:10px;top:10px;padding:4px 10px;border-radius:999px;background:rgba(255,253,247,.92);font-size:11px;font-weight:700;color:var(--color-text)">주변 {{ mp.count }}</div>
+</div>
+<div style="display:flex;gap:6px;margin-top:8px;align-items:center"><span style="font-size:11px;color:var(--color-neutral-700);margin-right:2px">반경</span><sc-for list="{{ fx.radiusChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="padding:6px 12px;border-radius:999px;border:none;cursor:pointer;font:600 12px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<sc-if value="{{ mp.pin.on }}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:10px;padding:12px 14px;border-radius:24px;background:var(--color-neutral-100);animation:up .25s ease">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:44px;height:44px;flex:none;border-radius:{{ mp.pin.rad }};overflow:hidden">{{ mp.pin.i }}</div>
+<div style="flex:1;min-width:0;line-height:1.35"><div style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px">{{ mp.pin.title }}<sc-if value="{{ mp.pin.ad }}" hint-placeholder-val="{{ false }}"><span style="font-size:9px;font-weight:700;padding:2px 6px;border-radius:999px;background:var(--color-text);color:var(--color-bg)">광고</span></sc-if></div><div style="font-size:12px;color:var(--color-neutral-700)">{{ mp.pin.sub }}</div></div>
+<div style="font-weight:700;font-size:13px;color:var(--color-accent-700)">{{ mp.pin.dist }}</div>
+</div>
+<sc-if value="{{ mp.pin.hasRoute }}" hint-placeholder-val="{{ false }}"><div style="margin-top:8px;padding:8px 12px;border-radius:14px;background:var(--color-accent-100);color:var(--color-accent-800);font-size:12px;font-weight:600">{{ mp.pin.routeInfo }}</div></sc-if>
+<div style="display:flex;gap:6px;margin-top:10px">
+<button onClick="{{ mp.pin.fav }}" aria-label="{{ mp.pin.favLabel }}" style="width:42px;height:42px;flex:none;border-radius:50%;border:none;background:var(--color-bg);cursor:pointer;display:grid;place-items:center;color:#C98A1F">{{ mp.pin.star }}</button>
+<button class="btn btn-primary" onClick="{{ mp.pin.route }}" style="flex:1;padding:11px 0;font-size:14px">{{ mp.pin.routeTxt }}</button>
+<button class="btn btn-secondary" onClick="{{ mp.pin.open }}" style="padding:11px 16px;font-size:14px">{{ mp.pin.openTxt }}</button>
+</div>
+</div>
+</sc-if>
+<div style="margin-top:10px;font-size:11px;line-height:1.5;color:var(--color-neutral-700)">내 위치는 약 500m 단위로 흐리게, 다른 멤버도 대략 위치만 보여요. 공개 범위를 끈 멤버는 지도에 나오지 않아요. (예시)</div>
+</sc-if>
+<div style="font-size:12px;color:var(--color-neutral-700);margin:16px 0 4px">{{ findCount }}명</div>
+<div style="display:flex;flex-direction:column;gap:2px;margin:0 -8px">
+<sc-for list="{{ found }}" as="p" hint-placeholder-count="4">
+<div onClick="{{ p.open }}" style="display:flex;align-items:center;gap:12px;padding:10px 8px;border-radius:22px;cursor:pointer" style-hover="background:var(--color-neutral-100)">
+<div style="width:48px;height:48px;flex:none;border-radius:50%;background:{{ p.bg }};color:{{ p.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:18px">{{ p.i }}</div>
+<div style="flex:1;min-width:0;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ p.n }} <span style="font-weight:400;font-size:12px;color:var(--color-neutral-700)">· {{ p.region }}{{ p.distTxt }}</span></div><div style="font-size:12px;color:var(--color-neutral-700)">{{ p.role }}</div><div style="font-size:11px;color:var(--color-accent-700);font-weight:600;margin-top:2px">{{ p.viaTxt }}</div></div>
+<span style="font-size:11px;padding:4px 8px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800)">{{ p.stateTxt }}</span>
+</div>
+</sc-for>
+<sc-if value="{{ foundEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:30px;text-align:center;font-size:13px;color:var(--color-neutral-700)">조건에 맞는 멤버가 없어요. 칩을 줄여보세요.</div></sc-if>
+</div>
+</div>
+</sc-if>
+
+<!-- PROFILE -->
+<sc-if value="{{ is.profile }}" hint-placeholder-val="{{ false }}">
+<div style="padding-bottom:110px">
+<div style="padding:4px 26px 0;position:relative">
+<div style="position:absolute;right:-40px;top:-30px;width:180px;height:180px;border-radius:50%;background:var(--color-accent-2-200)"></div>
+<div style="position:relative;width:96px;height:96px;border-radius:50%;background:{{ pr.bg }};color:{{ pr.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:38px">{{ pr.i }}</div>
+<h2 style="position:relative;margin:14px 0 2px;font-size:30px">{{ pr.n }}</h2>
+<div style="position:relative;font-size:14px;color:var(--color-neutral-800)">{{ pr.role }}</div>
+<div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap"><sc-for list="{{ pr.tags }}" as="t" hint-placeholder-count="2"><span class="tag tag-accent">{{ t }}</span></sc-for><span class="tag tag-neutral">{{ pr.region }}</span></div>
+</div>
+<div style="margin:22px 20px 0;padding:18px;border-radius:28px;background:var(--color-neutral-100)">
+<div style="font-size:12px;color:var(--color-neutral-700);margin-bottom:12px">이렇게 아는 사이예요</div>
+<div style="display:flex;align-items:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:60px"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading)">나</div><span style="font-size:11px">나</span></div>
+<div style="flex:1;height:4px;border-radius:4px;background:var(--color-accent-300);margin-bottom:18px"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:60px"><div style="width:44px;height:44px;border-radius:50%;background:{{ pr.viaBg }};color:{{ pr.viaFg }};display:grid;place-items:center;font-family:var(--font-heading)">{{ pr.viaI }}</div><span style="font-size:11px">{{ pr.via }}</span></div>
+<div style="flex:1;height:4px;border-radius:4px;background:var(--color-accent-2-300);margin-bottom:18px"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:60px"><div style="width:44px;height:44px;border-radius:50%;background:{{ pr.bg }};color:{{ pr.fg }};display:grid;place-items:center;font-family:var(--font-heading)">{{ pr.i }}</div><span style="font-size:11px">{{ pr.n }}</span></div>
+</div>
+<div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--color-divider);font-size:12px">공통 친구 <b>{{ pr.mutual }}명</b> · 같은 소속 <b>{{ pr.shared }}곳</b></div>
+<sc-if value="{{ pr.hasWeb }}" hint-placeholder-val="{{ false }}"><button onClick="{{ pr.web }}" style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:12px;padding:11px 14px;border-radius:999px;border:none;background:#241B14;color:#F6EBD9;cursor:pointer;font:600 13px var(--font-body)"><span>연결 경로 보기</span><span style="color:#F2C879">›</span></button></sc-if>
+</div>
+<div style="padding:18px 26px 0;font-size:14px;line-height:1.55;color:var(--color-neutral-800)">{{ pr.bio }}</div>
+</div>
+<div style="position:sticky;bottom:0;padding:12px 20px 22px;background:var(--color-bg);display:flex;gap:8px">
+<button class="btn btn-primary" onClick="{{ pr.primary }}" style="flex:1;padding:15px;font-size:15px;background:{{ pr.pBg }};color:{{ pr.pFg }}">{{ pr.primaryTxt }}</button>
+<button class="btn btn-secondary btn-icon" onClick="{{ pr.dm }}" style="width:52px;height:52px">{{ i.msg }}</button>
+</div>
+</sc-if>
+
+<!-- MSG ROOT -->
+<sc-if value="{{ is.msgs }}" hint-placeholder-val="{{ false }}">
+<div style="padding:8px 20px 24px">
+<h3 style="margin:0 0 14px">메시지</h3>
+<div style="display:flex;flex-direction:column;gap:4px;margin:0 -8px">
+<sc-for list="{{ threadList }}" as="t" hint-placeholder-count="3">
+<div onClick="{{ t.open }}" style="display:flex;align-items:center;gap:12px;padding:12px 8px;border-radius:22px;cursor:pointer" style-hover="background:var(--color-neutral-100)">
+<div style="width:50px;height:50px;flex:none;border-radius:50%;background:{{ t.bg }};color:{{ t.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:16px">{{ t.i }}</div>
+<div style="flex:1;min-width:0;line-height:1.3"><div style="display:flex;gap:6px;align-items:center"><span style="font-weight:700;font-size:14px">{{ t.title }}</span><span style="font-size:11px;color:var(--color-neutral-700)">{{ t.sub }}</span></div><div style="font-size:13px;color:var(--color-neutral-700);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.last }}</div></div>
+<sc-if value="{{ t.unread }}" hint-placeholder-val="{{ false }}"><div style="width:10px;height:10px;border-radius:50%;background:var(--color-accent)"></div></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<!-- CHAT -->
+<sc-if value="{{ is.chat }}" hint-placeholder-val="{{ false }}">
+<div style="padding:4px 16px 16px;display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ chatMsgs }}" as="m" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;align-items:{{ m.al }};gap:3px">
+<sc-if value="{{ m.showWho }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;color:var(--color-neutral-700);padding:0 6px">{{ m.who }}</span></sc-if>
+<div style="max-width:250px;padding:{{ m.pad }};border-radius:22px;background:{{ m.bg }};color:{{ m.fg }};font-size:{{ m.fs }};line-height:1.45">{{ m.t }}</div>
+</div>
+</sc-for>
+<sc-if value="{{ typing }}" hint-placeholder-val="{{ false }}"><div style="align-self:flex-start;padding:10px 14px;border-radius:22px;background:var(--color-neutral-100);font-size:13px;color:var(--color-neutral-700)">입력 중…</div></sc-if>
+</div>
+</sc-if>
+
+<!-- EVENT -->
+<sc-if value="{{ is.event }}" hint-placeholder-val="{{ false }}">
+<div style="padding:0 20px 110px">
+<sc-if value="{{ ev.hasCover }}" hint-placeholder-val="{{ false }}"><div style="height:150px;border-radius:28px;overflow:hidden;margin-bottom:12px">{{ ev.cover }}</div></sc-if>
+<div style="border-radius:32px;background:var(--color-accent-2-300);color:var(--color-accent-2-900);padding:22px;position:relative;overflow:hidden">
+<div style="position:absolute;right:-30px;bottom:-40px;width:160px;height:160px;border-radius:50%;background:var(--color-accent-2-400)"></div>
+<div style="position:relative;display:flex;align-items:baseline;gap:8px"><span style="font-family:var(--font-heading);font-size:56px;line-height:1">{{ ev.d }}</span><span style="font-size:13px;font-weight:600">{{ ev.m }} {{ ev.dow }} · {{ ev.time }}</span></div>
+<div style="position:relative;font-family:var(--font-heading);font-size:24px;margin:10px 0 4px">{{ ev.title }}</div>
+<div style="position:relative;font-size:13px;display:flex;gap:4px;align-items:center">{{ i.pinS }} {{ ev.where }}</div>
+</div>
+<div style="padding:18px 4px 0;font-size:14px;line-height:1.6;color:var(--color-neutral-800)">{{ ev.desc }}</div>
+<div style="margin-top:18px;padding:16px;border-radius:24px;background:var(--color-neutral-100)">
+<div style="display:flex;align-items:center;gap:10px">
+<div style="display:flex"><div style="width:30px;height:30px;border-radius:50%;background:var(--color-accent-300);border:2px solid var(--color-neutral-100)"></div><div style="width:30px;height:30px;border-radius:50%;background:var(--color-accent-2-400);border:2px solid var(--color-neutral-100);margin-left:-10px"></div><div style="width:30px;height:30px;border-radius:50%;background:var(--color-neutral-300);border:2px solid var(--color-neutral-100);margin-left:-10px"></div></div>
+<div style="font-size:13px;line-height:1.35"><b>{{ ev.going }}명</b> 참석 · 아는 사람 {{ ev.knownN }}명</div>
+</div>
+</div>
+<div style="margin-top:10px;font-size:12px;color:var(--color-neutral-700);padding:0 4px">{{ ev.groupName }}</div>
+</div>
+<div style="position:sticky;bottom:0;padding:12px 20px 22px;background:var(--color-bg)">
+<button class="btn btn-primary" onClick="{{ ev.toggle }}" style="width:100%;padding:16px;font-size:16px;background:{{ ev.bBg }};color:{{ ev.bFg }}">{{ ev.btn }}</button>
+</div>
+</sc-if>
+
+<!-- CARD ROOT -->
+<sc-if value="{{ is.card }}" hint-placeholder-val="{{ false }}">
+<div style="padding:8px 20px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px"><h3 style="margin:0">멤버십</h3><button class="btn btn-ghost" onClick="{{ openStyle }}" style="padding:7px 10px;font-size:12px">썸네일 꾸미기</button></div>
+<div onClick="{{ openCard }}" style="height:200px;border-radius:32px;background:var(--color-accent);color:var(--color-bg);position:relative;overflow:hidden;padding:20px;display:flex;flex-direction:column;box-shadow:var(--shadow-md);cursor:pointer">
+<div style="position:absolute;width:200px;height:200px;border-radius:50%;background:var(--color-accent-400);right:-60px;top:-70px"></div>
+<div style="position:absolute;width:110px;height:110px;border-radius:50%;background:var(--color-accent-600);right:40px;bottom:-50px"></div>
+<div style="position:relative;display:flex;justify-content:space-between;align-items:center"><span style="font-family:var(--font-heading);font-size:18px">우리끼리</span><div style="width:46px;height:46px;border-radius:50%;background:{{ me.bg }};color:{{ me.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:17px;border:2px solid var(--color-bg);overflow:hidden">{{ me.i }}</div></div>
+<div style="flex:1"></div>
+<div style="position:relative;font-family:var(--font-heading);font-size:28px">정우진</div>
+<div style="position:relative;display:flex;justify-content:space-between;font-size:12px"><span>No. 0412 · 탭해서 QR</span><span style="font-weight:700;letter-spacing:.1em">GOLD</span></div>
+</div>
+<div style="margin-top:14px;padding:14px 18px;border-radius:24px;background:var(--color-neutral-100)">
+<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px"><span><b>플래티넘</b>까지 모임 {{ tierLeft }}회</span><span style="color:var(--color-neutral-700)">{{ tierNow }} / 10</span></div>
+<div style="height:10px;border-radius:10px;background:var(--color-neutral-300)"><div style="width:{{ tierPct }};height:100%;border-radius:10px;background:var(--color-accent-2)"></div></div>
+</div>
+<div style="padding:20px 0 10px;font-family:var(--font-heading);font-size:18px">회원 혜택</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<sc-for list="{{ perkList }}" as="b" hint-placeholder-count="4">
+<div onClick="{{ b.open }}" style="padding:16px;border-radius:24px;background:{{ b.bg }};color:{{ b.fg }};display:flex;flex-direction:column;gap:14px;cursor:pointer">
+<div style="width:36px;height:36px;border-radius:50%;background:var(--color-bg);display:grid;place-items:center;color:var(--color-text)">{{ b.ic }}</div>
+<div style="line-height:1.3"><div style="font-weight:700;font-size:14px">{{ b.t }}</div><div style="font-size:11px">{{ b.s }}</div></div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<!-- PRIVACY -->
+<sc-if value="{{ is.privacy }}" hint-placeholder-val="{{ false }}">
+<div style="padding:0 20px 32px">
+<h3 style="margin:0 0 4px">내 공개 범위</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px;line-height:1.5">연결은 보이게, 프로필은 내가 허락할 때만. 팔로우나 맞팔은 권한이 아니에요.</p>
+<div style="padding:16px;border-radius:28px;background:var(--color-neutral-100)">
+<div style="display:flex;gap:4px;padding:3px;border-radius:999px;background:var(--color-bg)"><sc-for list="{{ pv.viewSeg }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="flex:1;padding:8px 2px;border-radius:999px;border:none;cursor:pointer;font:600 11.5px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="font-size:11px;color:var(--color-neutral-700);margin:12px 0 10px">{{ pv.prev.lvlTxt }}</div>
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none">{{ pv.prev.photo }}</div><div style="font-family:var(--font-heading);font-size:20px">{{ pv.prev.nameBig }}</div></div>
+<sc-for list="{{ pv.prev.rows }}" as="r" hint-placeholder-count="4"><div style="display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--color-divider);font-size:12.5px"><span style="color:var(--color-neutral-700);flex:none;width:68px">{{ r.k }}</span><span style="flex:1;text-align:right;font-weight:600;line-height:1.35">{{ r.v }}<sc-if value="{{ r.lock }}" hint-placeholder-val="{{ false }}"><span style="display:block;font-size:10.5px;font-weight:400;color:var(--color-neutral-600)">{{ r.why }}</span></sc-if></span></div></sc-for>
+<div style="padding:8px 0 0;border-top:1px solid var(--color-divider);font-size:11.5px;color:var(--color-accent-700);font-weight:600">{{ pv.prev.trace }}</div>
+</div>
+<div style="font-size:13px;font-weight:700;margin:22px 0 4px">연결망에서</div>
+<div style="display:flex;padding:3px;border-radius:999px;background:var(--color-neutral-100)"><sc-for list="{{ pv.webSeg }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="flex:1;padding:8px 0;border-radius:999px;border:none;cursor:pointer;font:600 13px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="font-size:11.5px;line-height:1.55;color:var(--color-neutral-700);margin-top:8px">{{ pv.webNote }}</div>
+<div style="font-size:13px;font-weight:700;margin:22px 0 6px">프로필 항목별로 누가 볼 수 있나요</div>
+<sc-for list="{{ pv.fields }}" as="f" hint-placeholder-count="5"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px solid var(--color-divider)"><span style="font-size:13px;font-weight:600;flex:none;width:76px">{{ f.l }}</span><div style="display:flex;gap:4px"><sc-for list="{{ f.chips }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="padding:6px 9px;border-radius:999px;cursor:pointer;font:600 11px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div></div></sc-for>
+<div style="display:flex;align-items:center;justify-content:space-between;margin:22px 0 4px"><div style="font-size:13px;font-weight:700">소개 요청 받기</div><button onClick="{{ pv.jumpOn.go }}" aria-label="소개 요청 받기" style="width:46px;height:28px;border-radius:999px;border:none;background:{{ pv.jumpOn.sw }};position:relative;cursor:pointer;padding:0"><span style="position:absolute;top:3px;left:{{ pv.jumpOn.x }};width:22px;height:22px;border-radius:50%;background:#fff;transition:left .2s"></span></button></div>
+<div style="font-size:11.5px;line-height:1.55;color:var(--color-neutral-700)">연결자를 거친 요청만 받아요. 연결자와 내가 모두 허용해야 열려요.</div>
+<sc-if value="{{ pv.jumpDetail }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px"><span style="font-size:12.5px">하루 받을 요청</span><div style="display:flex;gap:4px"><sc-for list="{{ pv.limitChips }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="padding:6px 11px;border-radius:999px;cursor:pointer;font:600 11.5px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px"><span style="font-size:12.5px">허용 후 열려 있는 기간</span><div style="display:flex;gap:4px"><sc-for list="{{ pv.expireChips }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" aria-pressed="{{ c.on }}" style="padding:6px 11px;border-radius:999px;cursor:pointer;font:600 11.5px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div></div>
+</sc-if>
+<div style="margin-top:20px;padding:12px 14px;border-radius:20px;border:1px dashed var(--color-divider);font-size:11.5px;line-height:1.6;color:var(--color-neutral-700)"><sc-for list="{{ pv.safety }}" as="t" hint-placeholder-count="3"><div>· {{ t }}</div></sc-for></div>
+<button class="btn btn-primary" onClick="{{ pv.save }}" style="width:100%;padding:16px;font-size:16px;margin-top:18px">{{ pv.saveTxt }}</button>
+<button class="btn btn-ghost" onClick="{{ pv.reset }}" style="width:100%;margin-top:6px;font-size:13px">기본값으로 되돌리기</button>
+</div>
+</sc-if>
+
+<!-- WEB -->
+<sc-if value="{{ is.web }}" hint-placeholder-val="{{ false }}">
+<div style="padding-bottom:24px">
+<div style="position:relative;height:400px;margin:0 8px;border-radius:30px;overflow:hidden;background:#17120E">
+<div style="position:absolute;inset:0">{{ web.canvas }}</div>
+<div style="position:absolute;left:14px;top:12px;padding:5px 11px;border-radius:999px;background:rgba(246,235,217,.14);color:#F6EBD9;font-size:11px;font-weight:700;pointer-events:none">{{ web.badge }}</div>
+<button onClick="{{ web.togglePriv }}" style="position:absolute;right:12px;top:10px;padding:5px 11px;border-radius:999px;border:1px solid rgba(246,235,217,.3);background:rgba(246,235,217,.08);color:#F6EBD9;font:600 11px var(--font-body);cursor:pointer">{{ web.privTxt }}</button>
+<div style="position:absolute;left:0;right:0;bottom:10px;text-align:center;font-size:11px;color:rgba(246,235,217,.7);pointer-events:none">{{ web.hint }}</div>
+</div>
+<div style="margin:12px 20px 0;padding:14px 16px;border-radius:26px;background:var(--color-neutral-100)">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:46px;height:46px;flex:none;border-radius:{{ web.info.rad }};overflow:hidden">{{ web.info.i }}</div>
+<div style="flex:1;min-width:0;line-height:1.35"><div style="font-weight:700;font-size:15px">{{ web.info.title }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ web.info.sub }}</div></div>
+<span class="tag tag-accent">{{ web.info.pill }}</span>
+</div>
+<div style="margin-top:10px;font-size:12.5px;line-height:1.5;font-weight:600">{{ web.info.via }}</div>
+<div style="margin-top:6px;font-size:11px;line-height:1.5;color:var(--color-neutral-700)">{{ web.info.pathTxt }}</div>
+<div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap">
+<sc-if value="{{ web.info.canDemo }}" hint-placeholder-val="{{ true }}"><button class="btn btn-primary" onClick="{{ web.info.demo }}" style="padding:10px 16px;font-size:13px">자동 탐색 데모</button></sc-if>
+<sc-if value="{{ web.info.canReplay }}" hint-placeholder-val="{{ false }}"><button class="btn btn-secondary" onClick="{{ web.info.replay }}" style="padding:10px 16px;font-size:13px">처음부터 따라가기</button></sc-if>
+<sc-if value="{{ web.info.canProfile }}" hint-placeholder-val="{{ false }}"><button class="btn btn-secondary" onClick="{{ web.info.profile }}" style="padding:10px 16px;font-size:13px">프로필 보기</button></sc-if>
+<sc-if value="{{ web.info.canJump }}" hint-placeholder-val="{{ false }}"><button class="btn btn-primary" onClick="{{ web.info.jump }}" style="padding:10px 16px;font-size:13px">소개 요청하기</button></sc-if>
+<sc-if value="{{ web.info.hasWait }}" hint-placeholder-val="{{ false }}"><span class="tag tag-accent" style="padding:9px 14px;font-size:12px;animation:wblink 1.2s infinite">{{ web.info.jumpWait }}</span></sc-if>
+<sc-if value="{{ web.info.jumpBlocked }}" hint-placeholder-val="{{ false }}"><div style="font-size:11.5px;line-height:1.5;color:var(--color-neutral-700)">3단계부터는 소개를 요청할 수 없어요. 더 가까운 연결을 먼저 거쳐 주세요.</div></sc-if>
+</div>
+</div>
+<div style="padding:16px 20px 6px;font-size:12px;font-weight:700">지나온 길</div>
+<div id="wtrail" style="display:flex;align-items:center;overflow-x:auto;padding:2px 20px 8px;scrollbar-width:none">
+<sc-for list="{{ web.trail }}" as="b" hint-placeholder-count="3">
+<sc-if value="{{ b.link }}" hint-placeholder-val="{{ false }}"><div style="width:16px;height:2px;flex:none;background:var(--color-accent-400)"></div></sc-if>
+<button onClick="{{ b.go }}" style="flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:72px;padding:8px 8px 6px;border-radius:16px;border:2px solid {{ b.bd }};background:{{ b.bg }};cursor:pointer;color:var(--color-text);font:inherit">
+<div style="width:30px;height:30px;border-radius:{{ b.rad }};overflow:hidden">{{ b.i }}</div>
+<span style="font-size:11px;font-weight:700;white-space:nowrap">{{ b.label }}</span>
+<span style="font-size:9px;color:var(--color-neutral-700);white-space:nowrap">{{ b.tag }}</span>
+<span style="font:9px ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">{{ b.hash }}</span>
+</button>
+</sc-for>
+</div>
+<div style="margin:6px 20px 0;padding:12px 14px;border-radius:20px;border:1px dashed var(--color-divider);font-size:11.5px;line-height:1.6;color:var(--color-neutral-700)">1단계는 이름, 2단계는 성만, 3단계부터는 ‘누군가’로 보여요. ‘엄격’ 모드는 2단계부터 가립니다. 직업·연락처는 같은 소속이 되기 전엔 열리지 않아요. 이 지도는 예시 데이터예요.</div>
+</div>
+</sc-if>
+
+<!-- ADD -->
+<sc-if value="{{ is.add }}" hint-placeholder-val="{{ false }}">
+<div style="padding:4px 20px 28px">
+<div style="display:flex;gap:6px;margin-bottom:14px"><sc-for list="{{ ad.dots }}" as="d" hint-placeholder-count="3"><div style="flex:1;height:6px;border-radius:6px;background:{{ d.bg }}"></div></sc-for></div>
+<div style="font-size:12px;color:var(--color-neutral-700);margin-bottom:8px">{{ ad.stepTxt }}</div>
+<sc-if value="{{ ad.s1 }}" hint-placeholder-val="{{ true }}">
+<h3 style="margin:0 0 6px">어디에 속했었나요?</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px">끊어진 소속을 다시 찾아드려요. 종류를 고르면 모임이 나와요.</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><sc-for list="{{ ad.kinds }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.go }}" style="padding:8px 14px;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ ad.cands }}" as="c" hint-placeholder-count="2">
+<button onClick="{{ c.pick }}" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:24px;background:var(--color-neutral-100);border:2px solid {{ c.bd }};cursor:pointer;text-align:left;font-family:var(--font-body);color:var(--color-text)">
+<div style="width:48px;height:48px;flex:none;border-radius:50%;background:{{ c.bg }};color:{{ c.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:14px">{{ c.short }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ c.name }}</div><div style="font-size:12px;color:var(--color-neutral-700)">멤버 {{ c.members }} · 아는 사람 {{ c.known }}명 · {{ c.region }}</div></div>
+</button>
+</sc-for>
+</div>
+<button class="btn btn-primary" onClick="{{ ad.next1 }}" disabled="{{ ad.noPick }}" style="width:100%;padding:16px;font-size:16px;margin-top:18px">다음: 실명·기수 확인</button>
+</sc-if>
+<sc-if value="{{ ad.s2 }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 6px">{{ ad.pickName }}</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px">같은 사람만 모이도록 소속마다 한 번 확인해요. 사칭을 막는 절차예요.</p>
+<div style="padding:14px 16px;border-radius:24px;background:var(--color-neutral-100);margin-bottom:16px"><div style="font-size:11px;color:var(--color-neutral-700)">실명</div><div style="font-weight:700;font-size:16px">정우진</div></div>
+<div style="font-size:12px;font-weight:600;margin-bottom:8px">{{ ad.cohortLabel }}</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ ad.cohorts }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.go }}" style="padding:8px 14px;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<button class="btn btn-primary" onClick="{{ ad.verify }}" disabled="{{ ad.verifying }}" style="width:100%;padding:16px;font-size:16px;margin-top:22px">{{ ad.verifyTxt }}</button>
+</sc-if>
+<sc-if value="{{ ad.s3 }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 6px">무엇을 보여줄까요?</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px">소속 사이의 정보 공유는 내가 켠 것만 연결돼요.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ ad.toggles }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.go }}" aria-pressed="{{ t.on }}" style="display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;border-radius:24px;background:var(--color-neutral-100);border:none;cursor:pointer;text-align:left;font-family:var(--font-body);color:var(--color-text)">
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ t.l }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ t.d }}</div></div>
+<div style="width:46px;height:28px;border-radius:28px;background:{{ t.sw }};position:relative;flex:none"><div style="position:absolute;top:3px;left:{{ t.x }};width:22px;height:22px;border-radius:50%;background:var(--color-bg)"></div></div>
+</button>
+</sc-for>
+</div>
+<button class="btn btn-primary" onClick="{{ ad.finish }}" style="width:100%;padding:16px;font-size:16px;margin-top:22px">{{ ad.finishTxt }}</button>
+</sc-if>
+</div>
+</sc-if>
+
+<!-- PERK -->
+<sc-if value="{{ is.perk }}" hint-placeholder-val="{{ false }}">
+<div style="padding:4px 20px 24px;display:flex;flex-direction:column;gap:10px">
+<div style="font-size:13px;color:var(--color-neutral-700);margin-bottom:4px">{{ perkDesc }}</div>
+<sc-for list="{{ buys }}" as="b" hint-placeholder-count="0">
+<div style="border-radius:28px;background:var(--color-accent-2-300);color:var(--color-accent-2-900);padding:18px">
+<div style="display:flex;gap:14px;align-items:center">
+<div style="width:64px;height:64px;flex:none;border-radius:50%;overflow:hidden">{{ b.art }}</div>
+<div style="line-height:1.3;flex:1"><div style="font-size:11px;font-weight:700">{{ b.s }}</div><div style="font-family:var(--font-heading);font-size:17px;margin:2px 0">{{ b.t }}</div><div style="font-size:12px">{{ b.now }}/{{ b.goal }}명 참여</div></div>
+</div>
+<div style="height:8px;border-radius:8px;background:var(--color-accent-2-200);margin:14px 0 12px"><div style="width:{{ b.pct }};height:100%;border-radius:8px;background:var(--color-accent-2-700)"></div></div>
+<button class="btn" onClick="{{ b.join }}" style="width:100%;padding:12px;background:{{ b.bBg }};color:{{ b.bFg }}">{{ b.btn }}</button>
+</div>
+</sc-for>
+<sc-for list="{{ deals }}" as="d" hint-placeholder-count="3">
+<div onClick="{{ d.use }}" style="display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:24px;background:var(--color-neutral-100);cursor:pointer" style-hover="background:var(--color-neutral-300)">
+<div style="width:46px;height:46px;flex:none;border-radius:50%;background:var(--color-accent-200);color:var(--color-accent-800);display:grid;place-items:center;font-family:var(--font-heading);font-size:13px">{{ d.pct }}</div>
+<div style="flex:1;line-height:1.3"><div style="font-weight:700;font-size:14px">{{ d.t }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ d.s }}</div></div>
+<span style="font-size:12px;font-weight:700;color:var(--color-accent-700)">{{ d.cta }}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+</div>
+
+<sc-if value="{{ is.chat }}" hint-placeholder-val="{{ false }}">
+<div style="flex:none;display:flex;gap:8px;padding:10px 16px 24px;align-items:center">
+<div style="flex:1;display:flex;align-items:center;padding:0 16px;border-radius:999px;background:var(--color-neutral-100)"><input value="{{ chatDraft }}" onChange="{{ onChatDraft }}" onKeyDown="{{ onChatKey }}" placeholder="메시지 보내기" style="flex:1;border:none;background:transparent;padding:12px 0;font:14px var(--font-body);color:var(--color-text);outline:none"></div>
+<button onClick="{{ sendChat }}" style="width:44px;height:44px;border-radius:50%;border:none;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;cursor:pointer" style-hover="background:var(--color-accent-600)">{{ i.sendS }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ is.group }}" hint-placeholder-val="{{ false }}">
+<button onClick="{{ openCompose }}" style="position:absolute;right:20px;bottom:100px;width:58px;height:58px;border-radius:50%;border:none;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;box-shadow:var(--shadow-lg);cursor:pointer;z-index:2" style-hover="background:var(--color-accent-600)">{{ i.plus }}</button>
+</sc-if>
+
+<sc-if value="{{ showTabs }}" hint-placeholder-val="{{ false }}">
+<div style="flex:none;display:flex;justify-content:space-around;padding:10px 8px 24px;background:var(--color-neutral-100);border-radius:28px 28px 0 0;box-shadow:var(--shadow-md)">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5"><button onClick="{{ t.go }}" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;font:{{ t.w }} 10px var(--font-body);color:{{ t.c }};width:60px;border:none;background:none;cursor:pointer;padding:4px 0">{{ t.ic }}<span>{{ t.l }}</span><sc-if value="{{ t.dot }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:2px;right:16px;width:9px;height:9px;border-radius:50%;background:var(--color-accent);border:2px solid var(--color-neutral-100)"></span></sc-if></button></sc-for>
+</div>
+</sc-if>
+
+<!-- CARD FULL -->
+<sc-if value="{{ is.cardFull }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeCard }}" style="position:absolute;inset:0;z-index:5;background:var(--color-accent);color:var(--color-bg);overflow:hidden;display:flex;flex-direction:column;padding:70px 28px 36px;cursor:pointer;animation:fade .2s ease-out">
+<div style="position:absolute;width:420px;height:420px;border-radius:50%;background:var(--color-accent-400);left:-120px;top:-140px"></div>
+<div style="position:absolute;width:240px;height:240px;border-radius:50%;background:var(--color-accent-600);right:-90px;top:320px"></div>
+<div style="position:relative;font-family:var(--font-heading);font-size:20px">우리끼리</div>
+<div style="position:relative;font-size:12px;letter-spacing:.14em;margin-top:4px">GOLD MEMBER</div>
+<div style="flex:1"></div>
+<div style="position:relative;width:160px;height:160px;border-radius:32px;background:var(--color-bg);display:grid;place-items:center;font:10px ui-monospace,Menlo,monospace;color:var(--color-neutral-700);margin-bottom:24px">QR · 입장/결제</div>
+<div style="position:relative;font-family:var(--font-heading);font-size:40px;line-height:1.05">정우진</div>
+<div style="position:relative;font-size:13px;margin-top:6px">No. 0412 · 소속 {{ groupCount }}곳 · 2023년부터</div>
+<div style="position:relative;font-size:12px;margin-top:18px;opacity:.85">탭해서 닫기</div>
+</div>
+</sc-if>
+
+<!-- SHEETS -->
+<sc-if value="{{ sheet.on }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;z-index:6;display:flex;flex-direction:column;justify-content:flex-end">
+<div onClick="{{ closeSheet }}" style="position:absolute;inset:0;background:var(--color-neutral-900);opacity:.5;animation:fade .2s ease-out"></div>
+<div style="position:relative;background:var(--color-bg);border-radius:36px 36px 0 0;padding:12px 24px 28px;display:flex;flex-direction:column;animation:up .25s ease-out">
+<div style="width:40px;height:5px;border-radius:5px;background:var(--color-neutral-300);align-self:center;margin-bottom:20px"></div>
+<sc-if value="{{ sheet.intro }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;margin-bottom:14px">
+<div style="width:50px;height:50px;border-radius:50%;background:{{ pr.viaBg }};color:{{ pr.viaFg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:19px;border:3px solid var(--color-bg)">{{ pr.viaI }}</div>
+<div style="width:50px;height:50px;border-radius:50%;background:{{ pr.bg }};color:{{ pr.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:19px;border:3px solid var(--color-bg);margin-left:-12px">{{ pr.i }}</div>
+</div>
+<h3 style="margin:0 0 6px">{{ pr.via }}에게 {{ pr.n }}님<br>소개를 부탁해요</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 16px">{{ pr.via }}님이 수락하면 세 사람 대화방이 열려요.</p>
+<div style="font-size:12px;font-weight:600;margin-bottom:8px">왜 만나고 싶어요?</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+<sc-for list="{{ reasons }}" as="r" hint-placeholder-count="4"><button onClick="{{ r.go }}" style="padding:8px 14px;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);border:1px solid {{ r.bd }};background:{{ r.bg }};color:{{ r.fg }}">{{ r.l }}</button></sc-for>
+</div>
+<textarea value="{{ introText }}" onChange="{{ onIntro }}" placeholder="한 줄 덧붙이기 (선택)" style="width:100%;min-height:96px;padding:14px 16px;border-radius:24px;border:1px solid var(--color-divider);background:var(--color-neutral-100);font:14px/1.5 var(--font-body);color:var(--color-text);resize:none;outline:none;box-sizing:border-box"></textarea>
+<button class="btn btn-primary" onClick="{{ sendIntro }}" style="width:100%;padding:16px;font-size:16px;margin-top:16px;gap:8px">{{ i.send }} {{ pr.via }}에게 보내기</button>
+</sc-if>
+<sc-if value="{{ sheet.style }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 4px">썸네일 꾸미기</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 12px">{{ sty.hint }}</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><sc-for list="{{ sty.scopes }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.go }}" style="padding:8px 14px;border-radius:999px;border:none;cursor:pointer;font:600 13px var(--font-body);background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
+<sc-for list="{{ sty.modes }}" as="m" hint-placeholder-count="4">
+<button onClick="{{ m.go }}" aria-pressed="{{ m.on }}" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 2px;border-radius:22px;border:2px solid {{ m.bd }};background:var(--color-neutral-100);cursor:pointer;font:600 12px var(--font-body);color:var(--color-text)">
+<div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:{{ m.bg }};color:{{ m.fg }};display:grid;place-items:center;font-family:var(--font-heading);font-size:18px">{{ m.el }}</div>{{ m.l }}</button>
+</sc-for></div>
+<sc-if value="{{ sty.showVar }}" hint-placeholder-val="{{ false }}"><div style="font-size:12px;font-weight:600;margin:16px 0 8px">내 아바타 후보</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ sty.vars }}" as="v" hint-placeholder-count="6"><button onClick="{{ v.go }}" aria-label="아바타 후보 선택" style="width:48px;height:48px;border-radius:50%;padding:0;overflow:hidden;border:3px solid {{ v.bd }};background:none;cursor:pointer">{{ v.el }}</button></sc-for></div></sc-if>
+<button class="btn btn-primary" onClick="{{ closeSheet }}" style="width:100%;padding:16px;font-size:16px;margin-top:20px">적용하기</button>
+</sc-if>
+<sc-if value="{{ sheet.jump }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 4px">{{ jp.target }}님께 소개 요청</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px;line-height:1.5">{{ jp.bridge }}님을 통해 닿는 사이예요. 상대가 허용하기 전에는 프로필이 열리지 않아요.</p>
+<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">
+<sc-for list="{{ jp.steps }}" as="t" hint-placeholder-count="3"><div style="display:flex;gap:10px;align-items:flex-start"><div style="width:22px;height:22px;flex:none;border-radius:50%;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-size:12px;font-weight:700">{{ t.n }}</div><div style="line-height:1.4"><div style="font-size:13px;font-weight:700">{{ t.t }}</div><div style="font-size:12px;color:var(--color-neutral-700)">{{ t.d }}</div></div></div></sc-for>
+</div>
+<div style="font-size:12px;font-weight:600;margin-bottom:8px">왜 만나고 싶어요?</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><sc-for list="{{ jp.reasons }}" as="r" hint-placeholder-count="4"><button onClick="{{ r.go }}" style="padding:8px 14px;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);border:1px solid {{ r.bd }};background:{{ r.bg }};color:{{ r.fg }}">{{ r.l }}</button></sc-for></div>
+<div style="font-size:11.5px;line-height:1.6;color:var(--color-neutral-700);margin-bottom:4px"><sc-for list="{{ jp.rules }}" as="u" hint-placeholder-count="4"><div>· {{ u }}</div></sc-for></div>
+<button class="btn btn-primary" onClick="{{ jp.send }}" disabled="{{ jp.noSend }}" style="width:100%;padding:16px;font-size:16px;margin-top:14px">소개 요청 보내기 · 오늘 {{ jp.remaining }}회 남음</button>
+</sc-if>
+<sc-if value="{{ sheet.compose }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 4px">{{ grp.label }}에 소식 남기기</h3>
+<p style="font-size:13px;color:var(--color-neutral-700);margin:0 0 14px">멤버 {{ grp.members }}명에게 보여요</p>
+<textarea value="{{ draft }}" onChange="{{ onDraft }}" placeholder="근황, 질문, 모임 제안…" style="width:100%;min-height:140px;padding:14px 16px;border-radius:24px;border:1px solid var(--color-divider);background:var(--color-neutral-100);font:15px/1.5 var(--font-body);color:var(--color-text);resize:none;outline:none;box-sizing:border-box"></textarea>
+<button class="btn btn-primary" onClick="{{ post }}" disabled="{{ draftEmpty }}" style="width:100%;padding:16px;font-size:16px;margin-top:16px">올리기</button>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:20px;right:20px;top:54px;z-index:9;padding:13px 18px;border-radius:999px;background:var(--color-text);color:var(--color-bg);font-size:13px;font-weight:600;text-align:center;box-shadow:var(--shadow-lg);animation:up .25s ease-out">{{ toast }}</div>
+</sc-if>
+
+</div>
+</div>
+</template>
+<script>
+/* Thumbnail art for the Membership Prototype: text / icon / avatar / image modes.
+   Everything is generated inline (SVG), no external images. */
+(function () {
+  let R = null;
+  let UID = 0;
+  const nid = () => 'q' + (UID++);
+  const hash = (str) => { let h = 7; const t = String(str); for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) >>> 0; return h; };
+
+  const SK = ['#F2C9A5', '#E9B48C', '#D79C72', '#F7D7BD', '#C98B63'];
+  const HR = ['#2B2118', '#4A3022', '#1E1E24', '#6B4A2F', '#8A5A3B', '#B88A4A'];
+  const SH = ['#2F5FA8', '#D96B3F', '#3E8F7A', '#7A5CA8', '#C94F6D', '#E0A13A'];
+  const BP = [['#F6D5B8', '#EBA98A'], ['#CFE3F2', '#8FB7D9'], ['#D8E8CB', '#9CC49A'], ['#EBD9F0', '#BFA2D4'], ['#FBE7B5', '#EFC26B'], ['#DCD5C8', '#B5AD9C']];
+  const DK = ['#B9562F', '#2F6A9E', '#3E7A47', '#6E4F9C', '#A87216', '#5E5A4F'];
+
+  const ICO = {
+    user: '<circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/>',
+    users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    grad: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>',
+    run: '<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/>',
+    code: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+    camera: '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/>',
+    bag: '<rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    home: '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+    mountain: '<path d="m8 3 4 8 5-5 5 15H2L8 3z"/>',
+    calendar: '<path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>'
+  };
+  const ICON_OF = { g1: 'grad', g2: 'run', g3: 'code', g4: 'camera' };
+  const KIND_ICON = { '학교': 'grad', '직장': 'bag', '동네': 'home', '동호회': 'mountain' };
+  const SCENE_OF = { g1: 'campus', g2: 'river', g3: 'city', g4: 'film' };
+  const KIND_SCENE = { '학교': 'campus', '직장': 'city', '동네': 'town', '동호회': 'mountain' };
+  const POST_SCENE = { p1: 'campus', p2: 'river', p3: 'cafe', p4: 'city', p5: 'film' };
+
+  const svgEl = (vb, inner) => R.createElement('svg', {
+    viewBox: vb, preserveAspectRatio: 'xMidYMid slice', 'aria-hidden': 'true',
+    style: { display: 'block', width: '100%', height: '100%' },
+    dangerouslySetInnerHTML: { __html: inner }
+  });
+  const iconSvg = (key, color, size, x, y, op) =>
+    `<g transform="translate(${x} ${y}) scale(${size / 24})" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="${op == null ? 1 : op}">${ICO[key]}</g>`;
+  const grad = (id, a, b) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>`;
+
+  const SCN = {
+    campus: (u) => grad(u + 's', '#F2A878', '#FBE9D0') +
+      `<rect width="200" height="100" fill="url(#${u}s)"/><circle cx="146" cy="32" r="13" fill="#FFF3D9" opacity=".95"/>` +
+      `<rect y="76" width="200" height="24" fill="#7FA37A"/><polygon points="40,100 160,100 118,76 82,76" fill="#E7D3B0"/>` +
+      `<polygon points="68,42 100,24 132,42" fill="#9C4F3A"/><rect x="72" y="42" width="56" height="36" fill="#B9654A"/>` +
+      `<rect x="78" y="46" width="44" height="3" fill="#F3E3CC"/><rect x="78" y="52" width="5" height="26" fill="#F3E3CC"/><rect x="90" y="52" width="5" height="26" fill="#F3E3CC"/><rect x="105" y="52" width="5" height="26" fill="#F3E3CC"/><rect x="117" y="52" width="5" height="26" fill="#F3E3CC"/>` +
+      `<rect x="96" y="64" width="8" height="14" fill="#6B3A2B"/><circle cx="52" cy="66" r="14" fill="#4E7A55"/><rect x="50" y="74" width="4" height="8" fill="#5B3F2A"/><circle cx="152" cy="68" r="12" fill="#5E8B5C"/><rect x="150" y="74" width="4" height="8" fill="#5B3F2A"/>`,
+    river: (u) => grad(u + 's', '#86BFE6', '#FDEBD0') +
+      `<rect width="200" height="100" fill="url(#${u}s)"/><circle cx="100" cy="38" r="12" fill="#FFF7E6"/>` +
+      `<path d="M0 60 Q40 38 80 56 T160 52 T200 58 V70 H0Z" fill="#8FB28F"/><rect y="62" width="200" height="22" fill="#4F8FBF"/>` +
+      `<path d="M10 70 Q20 67 30 70 T50 70 M70 76 Q80 73 90 76 T110 76 M130 69 Q140 66 150 69 T170 69" stroke="#fff" stroke-width="1.5" fill="none" opacity=".6"/>` +
+      `<rect y="56" width="200" height="3" fill="#5B6F8A"/><path d="M20 59 Q35 70 50 59 M70 59 Q85 70 100 59 M120 59 Q135 70 150 59" stroke="#5B6F8A" stroke-width="2" fill="none"/>` +
+      `<rect y="84" width="200" height="16" fill="#D9B88F"/>` +
+      `<circle cx="86" cy="78" r="3.2" fill="#2E3A59"/><path d="M86 82 L83 92 M86 82 L90 92 M86 84 L82 88 M86 84 L91 86" stroke="#2E3A59" stroke-width="2" stroke-linecap="round" fill="none"/>` +
+      `<circle cx="110" cy="78" r="3.2" fill="#D96B3F"/><path d="M110 82 L107 92 M110 82 L114 92 M110 84 L106 88 M110 84 L115 86" stroke="#D96B3F" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    city: (u) => {
+      const B = [[8, 44, 22], [32, 30, 18], [52, 48, 20], [74, 22, 22], [98, 38, 18], [118, 16, 24], [144, 44, 20], [166, 32, 26]];
+      const bl = B.map(([x, t, w], bi) => {
+        let r = '';
+        for (let yy = t + 5; yy < 92; yy += 9) for (let xx = x + 3; xx < x + w - 3; xx += 6) if (((xx * 7 + yy * 3 + bi) % 5) < 3) r += `<rect x="${xx}" y="${yy}" width="3" height="4" fill="#F7D774" opacity=".85"/>`;
+        return `<rect x="${x}" y="${t}" width="${w}" height="${100 - t}" fill="#0F1830"/>${r}`;
+      }).join('');
+      return grad(u + 's', '#1F2A44', '#566A93') + `<rect width="200" height="100" fill="url(#${u}s)"/>` +
+        '<circle cx="150" cy="18" r="8" fill="#FFF3D1"/><circle cx="30" cy="14" r="1.2" fill="#fff"/><circle cx="64" cy="26" r="1" fill="#fff"/><circle cx="104" cy="10" r="1.2" fill="#fff"/><circle cx="184" cy="40" r="1" fill="#fff"/>' + bl;
+    },
+    film: () =>
+      '<rect width="200" height="100" fill="#EAD9BF"/><rect width="200" height="12" fill="#2B2118"/><rect y="88" width="200" height="12" fill="#2B2118"/>' +
+      [8, 28, 48, 68, 88, 108, 128, 148, 168, 188].map((x) => `<rect x="${x}" y="3" width="6" height="6" rx="1" fill="#EAD9BF"/><rect x="${x}" y="91" width="6" height="6" rx="1" fill="#EAD9BF"/>`).join('') +
+      '<rect x="12" y="20" width="54" height="60" fill="#FBF3E4" stroke="#2B2118" stroke-width="1.5"/><rect x="16" y="24" width="46" height="52" fill="#BFDDF0"/><circle cx="48" cy="38" r="6" fill="#FFF3D9"/><path d="M16 76 L30 52 L42 66 L52 56 L62 76Z" fill="#6E8F6B"/>' +
+      '<rect x="73" y="20" width="54" height="60" fill="#FBF3E4" stroke="#2B2118" stroke-width="1.5"/><rect x="77" y="24" width="46" height="52" fill="#F2A878"/><path d="M77 76 L100 36 L123 76Z" fill="#7A4A3A"/><circle cx="112" cy="36" r="5" fill="#FFF3D9"/>' +
+      '<rect x="134" y="20" width="54" height="60" fill="#FBF3E4" stroke="#2B2118" stroke-width="1.5"/><rect x="138" y="24" width="46" height="52" fill="#CFE3C4"/><circle cx="161" cy="48" r="13" fill="#D96B3F"/><rect x="138" y="64" width="46" height="12" fill="#8FB28F"/>',
+    town: (u) => grad(u + 's', '#BFDDF0', '#FFF3DC') +
+      `<rect width="200" height="100" fill="url(#${u}s)"/><circle cx="162" cy="24" r="11" fill="#FFF3D9"/><rect y="86" width="200" height="14" fill="#8FB78A"/>` +
+      '<rect x="26" y="62" width="36" height="26" fill="#E3B7A0"/><polygon points="22,62 44,44 66,62" fill="#B9654A"/><rect x="40" y="72" width="8" height="16" fill="#7A4A3A"/>' +
+      '<rect x="76" y="54" width="44" height="34" fill="#F2D9A6"/><polygon points="72,54 98,34 124,54" fill="#D96B3F"/><rect x="82" y="62" width="8" height="8" fill="#BFDDF0"/><rect x="106" y="62" width="8" height="8" fill="#BFDDF0"/><rect x="94" y="72" width="8" height="16" fill="#7A4A3A"/>' +
+      '<rect x="136" y="66" width="32" height="22" fill="#BFD6C4"/><polygon points="132,66 152,50 172,66" fill="#5E7F8E"/><circle cx="184" cy="72" r="11" fill="#5E8B5C"/><rect x="182" y="80" width="4" height="8" fill="#5B3F2A"/>',
+    mountain: (u) => grad(u + 's', '#9CCBE8', '#E8F3E0') +
+      `<rect width="200" height="100" fill="url(#${u}s)"/><circle cx="52" cy="26" r="10" fill="#FFF7E6"/>` +
+      '<polygon points="0,84 52,44 100,84" fill="#7A9B86"/><polygon points="64,88 118,22 190,88" fill="#55775E"/><polygon points="106,38 118,22 130,40 118,35" fill="#fff"/>' +
+      '<rect y="84" width="200" height="16" fill="#3F5F45"/><polygon points="20,86 28,66 36,86" fill="#2F4B36"/><polygon points="150,90 160,68 170,90" fill="#2F4B36"/><polygon points="174,90 182,72 190,90" fill="#2F4B36"/>',
+    cafe: () =>
+      '<rect width="200" height="100" fill="#E9C9A0"/><rect x="118" y="12" width="60" height="54" fill="#BFDDF0" stroke="#8A5A3B" stroke-width="3"/><path d="M148 12 V66 M118 39 H178" stroke="#8A5A3B" stroke-width="2"/><circle cx="160" cy="28" r="6" fill="#FFF3D9"/>' +
+      '<rect y="74" width="200" height="26" fill="#8A5A3B"/><rect x="72" y="52" width="26" height="22" rx="6" fill="#FBF3E4"/><path d="M98 57 Q108 58 106 66 Q104 70 98 69" stroke="#FBF3E4" stroke-width="4" fill="none"/><ellipse cx="85" cy="53" rx="12" ry="3" fill="#6B3A2B"/>' +
+      '<path d="M80 46 Q76 40 80 34 M88 46 Q92 38 88 30" stroke="#fff" stroke-width="2" fill="none" opacity=".75" stroke-linecap="round"/>' +
+      '<rect x="22" y="58" width="16" height="16" rx="3" fill="#B9654A"/><path d="M30 58 Q18 46 24 36 M30 58 Q42 46 38 34 M30 58 V32" stroke="#4E7A55" stroke-width="3" fill="none" stroke-linecap="round"/>'
+  };
+
+  const sceneArt = (key) => svgEl('0 0 200 100', (SCN[key] || SCN.campus)(nid()));
+
+  const productArt = (id) => {
+    const u = nid();
+    const clip = `<defs><clipPath id="${u}c"><circle cx="50" cy="50" r="50"/></clipPath></defs>`;
+    if (id === 'b1') return svgEl('0 0 100 100', clip + `<g clip-path="url(#${u}c)"><rect width="100" height="100" fill="#F3D9C4"/><rect x="42" y="30" width="16" height="52" rx="6" fill="#5B1F2E"/><rect x="46" y="12" width="8" height="22" rx="2" fill="#5B1F2E"/><rect x="45" y="12" width="10" height="6" fill="#C9A14A"/><rect x="44" y="52" width="12" height="16" fill="#F7ECD9"/><rect x="45" y="34" width="2" height="40" fill="#fff" opacity=".25"/><ellipse cx="50" cy="86" rx="22" ry="4" fill="#000" opacity=".12"/></g>`);
+    return svgEl('0 0 100 100', clip + `<g clip-path="url(#${u}c)"><rect width="100" height="100" fill="#FBE7B5"/><circle cx="38" cy="58" r="20" fill="#F0922B"/><circle cx="64" cy="50" r="20" fill="#F7A63F"/><circle cx="52" cy="74" r="17" fill="#E8821F"/><path d="M60 30 Q74 24 76 38 Q64 40 60 30Z" fill="#4E8A55"/><circle cx="32" cy="52" r="4" fill="#fff" opacity=".35"/></g>`);
+  };
+
+  const personInner = (seed, mode) => {
+    const h = hash(seed), u = nid();
+    const sk = SK[h % 5], hr = HR[(h >> 3) % 6], sh = SH[(h >> 5) % 6], bp = BP[(h >> 7) % 6], style = (h >> 9) % 3;
+    if (mode === 'icon') return `<rect width="100" height="100" fill="${DK[(h >> 7) % 6]}"/>${iconSvg('user', '#fff', 48, 26, 26, 1)}`;
+    const hairBack = style === 1 ? `<ellipse cx="50" cy="46" rx="21" ry="25" fill="${hr}"/>` : '';
+    const hairTop = style === 2
+      ? `<path d="M31 42 Q30 20 50 20 Q70 20 69 42 Q64 28 50 28 Q36 28 31 42Z" fill="${hr}"/><circle cx="50" cy="18" r="6" fill="${hr}"/>`
+      : `<path d="M32 43 Q31 21 50 21 Q69 21 68 43 Q62 31 50 31 Q38 31 32 43Z" fill="${hr}"/>`;
+    const face = mode === 'avatar'
+      ? '<circle cx="43" cy="45" r="2" fill="#2B2118"/><circle cx="57" cy="45" r="2" fill="#2B2118"/><path d="M44 53 Q50 58 56 53" stroke="#8A4B3A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="38" cy="51" r="3" fill="#F29A8E" opacity=".45"/><circle cx="62" cy="51" r="3" fill="#F29A8E" opacity=".45"/>'
+      : '';
+    const bg = mode === 'avatar'
+      ? `<rect width="100" height="100" fill="${bp[0]}"/>`
+      : `<defs><linearGradient id="${u}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${bp[0]}"/><stop offset="1" stop-color="${bp[1]}"/></linearGradient></defs><rect width="100" height="100" fill="url(#${u}g)"/><circle cx="20" cy="22" r="14" fill="#fff" opacity=".25"/><circle cx="82" cy="30" r="9" fill="#fff" opacity=".2"/><circle cx="74" cy="80" r="16" fill="#fff" opacity=".15"/>`;
+    return `<defs><clipPath id="${u}c"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#${u}c)">${bg}${hairBack}<path d="M12 100 Q14 72 50 70 Q86 72 88 100Z" fill="${sh}"/><rect x="44" y="58" width="12" height="14" rx="5" fill="${sk}"/><ellipse cx="50" cy="44" rx="17" ry="19" fill="${sk}"/>${hairTop}${face}</g>`;
+  };
+
+  const makeArt = (mode, kind, o, seed) => {
+    if (mode === 'text') return null;
+    const u = nid(), h = hash(seed), bp = BP[h % 6], dk = DK[h % 6];
+    const clip = `<defs><clipPath id="${u}c"><circle cx="50" cy="50" r="50"/></clipPath></defs>`;
+    if (kind === 'p') return svgEl('0 0 100 100', personInner(seed, mode));
+    const ev = kind === 'e';
+    const key = ev ? 'calendar' : (ICON_OF[o.id] || KIND_ICON[o.kind] || 'users');
+    if (mode === 'photo') {
+      const sc = ev ? (SCENE_OF[o.g] || 'campus') : (SCENE_OF[o.id] || KIND_SCENE[o.kind] || 'campus');
+      const ov = ev ? '<rect width="200" height="100" fill="#000" opacity=".4"/>' : '';
+      return svgEl('0 0 200 100', `<defs><clipPath id="${u}c"><circle cx="100" cy="50" r="50"/></clipPath></defs><g clip-path="url(#${u}c)">${SCN[sc](u)}${ov}</g>`);
+    }
+    if (mode === 'icon') return svgEl('0 0 100 100', `${clip}<g clip-path="url(#${u}c)"><rect width="100" height="100" fill="${dk}"/>${ev ? iconSvg(key, '#fff', 60, 20, 20, 0.3) : iconSvg(key, '#fff', 48, 26, 26, 1)}</g>`);
+    return svgEl('0 0 100 100', `${clip}<g clip-path="url(#${u}c)"><rect width="100" height="100" fill="${bp[0]}"/>${ev ? iconSvg(key, dk, 60, 20, 20, 0.3) : `<circle cx="50" cy="50" r="30" fill="#fff" opacity=".85"/>${iconSvg(key, dk, 34, 33, 33, 1)}`}</g>`);
+  };
+
+  const coverArt = (mode, key, scene, o) => {
+    const h = hash(o.id || o.title || o.label || 'x'), bp = BP[h % 6], dk = DK[h % 6];
+    if (mode === 'photo') return sceneArt(scene);
+    if (mode === 'icon') return svgEl('0 0 200 100', `<rect width="200" height="100" fill="${dk}"/><circle cx="170" cy="20" r="46" fill="#fff" opacity=".08"/><circle cx="24" cy="92" r="40" fill="#fff" opacity=".08"/>${iconSvg(key, '#fff', 52, 74, 24, 0.95)}`);
+    if (mode === 'avatar') return svgEl('0 0 200 100', `<rect width="200" height="100" fill="${bp[0]}"/><circle cx="168" cy="22" r="40" fill="${bp[1]}" opacity=".5"/><circle cx="30" cy="90" r="34" fill="${bp[1]}" opacity=".4"/><circle cx="100" cy="50" r="32" fill="#fff" opacity=".9"/>${iconSvg(key, dk, 34, 83, 33, 1)}`);
+    const label = String(o.short || o.label || o.title || '').replace(/[<>&]/g, '');
+    return svgEl('0 0 200 100', `<rect width="200" height="100" fill="${bp[0]}"/><text x="100" y="64" text-anchor="middle" font-size="44" fill="${dk}" style="font-family:var(--font-heading)">${label}</text>`);
+  };
+
+  function build(s, ctx, comp) {
+    R = ctx.React;
+    const { PEOPLE, GROUPS, EVENTS, COL } = ctx;
+
+    const T = (o, kind) => {
+      if (!o || !(o.id || o.title || o.n || o.who)) return o;
+      const out = { ...o };
+      if (kind === 'p') {
+        const me = o.id === 'me' || o.who === '정우진';
+        const pp = PEOPLE.find((x) => x.id === o.id);
+        const nm = me ? 'me' + s.meVar : pp ? pp.n : (o.n || o.who || o.title || o.id);
+        const mode = s.thm[me ? 'me' : 'member'];
+        if (mode !== 'text') {
+          out.i = makeArt(mode, 'p', o, nm);
+          if (o.via) out.viaI = makeArt(mode, 'p', o, o.via);
+        }
+      } else if (kind === 'g') {
+        const mode = s.thm.group;
+        const key = ICON_OF[o.id] || KIND_ICON[o.kind] || 'users';
+        const scene = SCENE_OF[o.id] || KIND_SCENE[o.kind] || 'campus';
+        if (mode !== 'text') { const el = makeArt(mode, 'g', o, o.id); out.short = el; out.i = el; }
+        out.cover = coverArt(mode, key, scene, o);
+      } else if (kind === 'e') {
+        const mode = s.thm.event;
+        const scene = SCENE_OF[o.g] || 'campus';
+        if (mode === 'text') { out.thumb = null; out.tc = o.fg; out.ts = 'none'; out.hasCover = false; }
+        else {
+          out.thumb = makeArt(mode, 'e', o, o.id);
+          out.tc = mode === 'avatar' ? '#2B2118' : '#fff';
+          out.ts = mode === 'photo' ? '0 1px 3px rgba(0,0,0,.6)' : 'none';
+          out.hasCover = true;
+          out.cover = coverArt(mode, 'calendar', scene, o);
+        }
+      }
+      return out;
+    };
+
+    const MODES = [['text', '텍스트'], ['icon', '아이콘'], ['avatar', '아바타'], ['photo', '이미지']];
+    const sc = s.styScope;
+    const SMP = {
+      me: ['p', {}, 'me' + s.meVar, '우', 'AC'],
+      member: ['p', {}, '이서연', '서', 'S4'],
+      group: ['g', GROUPS[0], 'g1', '08', 'AC'],
+      event: ['e', EVENTS[0], 'e1', '21', 'S']
+    }[sc];
+    const cur = s.thm[sc];
+    const HINT = {
+      me: '내 프로필 사진이에요. 홈 카드와 내가 쓴 글에 보여요.',
+      member: '다른 회원의 썸네일이에요. 찾기, 멤버 목록, 소식, 프로필에 보여요.',
+      group: '소속의 대표 썸네일과 대문 이미지에 적용돼요.',
+      event: '모임 목록의 날짜 썸네일과 모임 상세 배너에 적용돼요.'
+    }[sc];
+    const sty = {
+      hint: HINT,
+      scopes: [['me', '내 프로필'], ['member', '회원'], ['group', '소속'], ['event', '모임']].map(([k, l]) => ({
+        l, bg: sc === k ? 'var(--color-text)' : 'var(--color-neutral-100)', fg: sc === k ? 'var(--color-bg)' : 'var(--color-text)',
+        go: () => comp.setState({ styScope: k })
+      })),
+      modes: MODES.map(([m, l]) => ({
+        l, on: cur === m,
+        el: m === 'text' ? SMP[3] : makeArt(m, SMP[0], SMP[1], SMP[2]),
+        bg: m === 'text' ? COL[SMP[4]][0] : 'var(--color-neutral-100)',
+        fg: m === 'text' ? COL[SMP[4]][1] : 'var(--color-text)',
+        bd: cur === m ? 'var(--color-accent)' : 'var(--color-divider)',
+        go: () => comp.setState((st) => ({ thm: { ...st.thm, [sc]: m } }))
+      })),
+      showVar: sc === 'me' && cur !== 'text',
+      vars: [0, 1, 2, 3, 4, 5].map((k) => ({
+        el: makeArt(cur === 'text' ? 'avatar' : cur, 'p', {}, 'me' + k),
+        bd: s.meVar === k ? 'var(--color-accent)' : 'transparent',
+        go: () => comp.setState({ meVar: k })
+      }))
+    };
+    return { T, sty };
+  }
+
+  window.THUMB = { build, sceneArt, productArt, POST_SCENE, SCENE_OF, makeArt, personInner, iconSvg, ICO, DK, hash, nid };
+})();
+
+</script>
+<script>
+/* Membership Prototype: 연결망(관계 거미줄) view, 위치 기반 지도 찾기, 광고 슬롯.
+   All data is fictional demo data. Rendered with React elements so taps, drags and glides work. */
+(function () {
+  const TH = window.THUMB;
+  let R = null;
+  const h = (...a) => R.createElement(...a);
+
+  /* ---------------------------------------------------------------- graph */
+  const P = {
+    u1: { n: '이서연', r: '프로덕트 디자이너' }, u2: { n: '한도윤', r: '백엔드 개발자' }, u3: { n: '오하린', r: 'UX 리서처' },
+    u4: { n: '윤재민', r: 'CTO' }, u5: { n: '정소희', r: '브랜드 디자이너' }, u6: { n: '강태오', r: '투자심사역' },
+    u7: { n: '문유나', r: '셰프' }, u8: { n: '서지후', r: '변호사' },
+    mj: { n: '김민지', r: '경영 08 총무' }, jh: { n: '박준호', r: '러닝크루 운영진' }, de: { n: '최다은', r: '카페 운영' },
+    ga: { n: '임가온', r: '데이터 분석가' }, hj: { n: '송하준', r: '대학원생' }, ny: { n: '권나연', r: '편집자' },
+    dh: { n: '배도현', r: '요리사' }, es: { n: '노은서', r: '서퍼·사진가' }, ji: { n: '한지우', r: '해양생물학자' }
+  };
+  const GRP = {
+    g1: { n: '경영 08', ic: 'grad', mine: true }, g2: { n: '러닝크루', ic: 'run', mine: true },
+    g3: { n: 'IT 동문', ic: 'code', mine: true }, g4: { n: '필름사진', ic: 'camera', mine: true },
+    g5: { n: '한결 스터디', ic: 'book' }, g6: { n: '비공개 모임', ic: 'lock', priv: true },
+    g7: { n: '성수 보드게임', ic: 'users' }, g8: { n: '부산 러닝', ic: 'run' }, g9: { n: '제주 서핑', ic: 'mountain' }
+  };
+  const MEM = {
+    g1: ['me', 'mj', 'de', 'u1', 'u2', 'u6', 'u8'], g2: ['me', 'jh', 'u1', 'u3', 'u7'], g3: ['me', 'u2', 'u4'], g4: ['me', 'u5', 'de'],
+    g5: ['u4', 'u8', 'ga', 'hj'], g6: ['hj', 'ny', 'u3'], g7: ['u5', 'ny', 'dh'], g8: ['u7', 'dh', 'es'], g9: ['es', 'ji']
+  };
+  const adj = {};
+  const link = (a, b) => { (adj[a] = adj[a] || []).push(b); (adj[b] = adj[b] || []).push(a); };
+  Object.keys(MEM).forEach((g) => MEM[g].forEach((p) => link(g, p)));
+  const dist = { me: 0 }, par = {};
+  (() => { const q = ['me']; while (q.length) { const x = q.shift(); (adj[x] || []).forEach((y) => { if (dist[y] == null) { dist[y] = dist[x] + 1; par[y] = x; q.push(y); } }); } })();
+  const pathTo = (id) => { const out = []; let c = id; while (c) { out.unshift(c); c = par[c]; } return out; };
+  const stepsOf = (id) => (GRP[id] ? (dist[id] - 1) / 2 : dist[id] / 2);
+  const mask = (n) => n.charAt(0) + '○○';
+  const ORDER = {}; Object.keys(adj).forEach((k, i) => { ORDER[k] = i; });
+  const PEOPLE_IDS = Object.keys(P);
+  const STATS = {
+    direct: PEOPLE_IDS.filter((id) => stepsOf(id) <= 1).length,
+    total: PEOPLE_IDS.length,
+    max: Math.max(...PEOPLE_IDS.map(stepsOf)),
+    groups: Object.keys(GRP).filter((g) => GRP[g].mine).length
+  };
+
+  let UNL = {};
+  const label = (id, priv) => {
+    if (id === 'me') return '나';
+    if (UNL[id] && P[id]) return P[id].n;
+    if (GRP[id]) { const g = GRP[id]; if (g.mine) return g.n; if (priv === 'strict') return '다른 모임'; return g.priv ? '비공개 모임' : g.n; }
+    const st = stepsOf(id), n = P[id].n;
+    if (st <= 1) return n;
+    if (priv === 'strict') return '누군가';
+    return st === 2 ? mask(n) : '누군가';
+  };
+
+  /* ---------------------------------------------------------------- icons */
+  const ICO2 = {
+    lock: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+    book: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+    coffee: '<path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/>'
+  };
+  const iconG = (key, color, size, x, y, op) =>
+    `<g transform="translate(${x} ${y}) scale(${size / 24})" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="${op == null ? 1 : op}">${TH.ICO[key] || ICO2[key] || ''}</g>`;
+
+  /* ---------------------------------------------------------------- layout */
+  const W = 360, H = 440, CX = 180, CY = 220, R1 = 98, R2 = 158;
+  function layout(focus, backId, backAngle) {
+    const ns = (adj[focus] || []).slice().sort();
+    const n = ns.length || 1;
+    const hasBack = backId && ns.includes(backId);
+    const base = hasBack ? backAngle : -Math.PI / 2;
+    const order = hasBack ? [backId, ...ns.filter((x) => x !== backId)] : ns;
+    const pos = {}, edges = [];
+    pos[focus] = { x: CX, y: CY, a: 0, ring: 0 };
+    order.forEach((id, k) => {
+      const a = base + (k * 2 * Math.PI) / n;
+      pos[id] = { x: CX + R1 * Math.cos(a), y: CY + R1 * Math.sin(a), a, ring: 1 };
+      edges.push({ a: focus, b: id, ring: 1 });
+    });
+    order.forEach((id) => {
+      let placed = 0;
+      (adj[id] || []).filter((x) => x !== focus).forEach((x) => {
+        if (pos[x]) { edges.push({ a: id, b: x, ring: 2 }); return; }
+        if (placed >= 3) return;
+        placed++;
+        const a = pos[id].a + (placed - 2) * 0.36;
+        const rr = R2 + (placed % 2) * 8;
+        pos[x] = { x: CX + rr * Math.cos(a), y: CY + rr * Math.sin(a), a, ring: 2, via: id };
+        edges.push({ a: id, b: x, ring: 2 });
+      });
+    });
+    return { pos, edges };
+  }
+
+  /* ---------------------------------------------------------------- actions */
+  const clearTimers = (comp) => { (comp._wt || []).forEach(clearTimeout); comp._wt = []; };
+  function travel(comp, id) {
+    const s = comp.state;
+    const L = layout(s.webFocus, s.webBackId, s.webBack);
+    const p = L.pos[id];
+    const trail = s.webTrail;
+    const idx = trail.indexOf(id);
+    comp.setState({
+      webFocus: id, webBackId: s.webFocus, webBack: (p ? p.a : 0) + Math.PI,
+      webTrail: idx >= 0 ? trail.slice(0, idx + 1) : [...trail, id]
+    });
+    comp._pan = { x: 0, y: 0 };
+    if (comp._vp) { comp._vp.style.transition = 'transform .6s'; comp._vp.style.transform = 'translate(0px,0px)'; }
+    setTimeout(() => { try { const el = document.getElementById('wtrail'); if (el) el.scrollTo({ left: el.scrollWidth, behavior: 'smooth' }); } catch (_) { /* ignore */ } }, 140);
+  }
+  function demo(comp) {
+    clearTimers(comp);
+    comp._pan = { x: 0, y: 0 };
+    comp.setState({ webFocus: 'me', webBackId: null, webBack: -Math.PI / 2, webTrail: ['me'] });
+    comp._wt.push(setTimeout(() => play(comp, pathTo('ji').slice(1)), 700));
+  }
+  function play(comp, path) {
+    comp._wt = comp._wt || [];
+    path.forEach((id, i) => comp._wt.push(setTimeout(() => travel(comp, id), i * 850)));
+  }
+  function open(comp, target) {
+    clearTimers(comp);
+    comp._pan = { x: 0, y: 0 };
+    comp.setState((st) => ({ stack: [...st.stack, { v: 'web' }], sheet: null, webFocus: 'me', webBackId: null, webBack: -Math.PI / 2, webTrail: ['me'] }));
+    if (target) comp._wt.push(setTimeout(() => play(comp, pathTo(target).slice(1)), 1000));
+  }
+  function tap(comp, id, via) {
+    if (comp._dragMoved) return;
+    clearTimers(comp);
+    const f = comp.state.webFocus;
+    if (id === f) return;
+    if (via && via !== f) { travel(comp, via); comp._wt.push(setTimeout(() => travel(comp, id), 850)); } else travel(comp, id);
+  }
+  function replay(comp) {
+    clearTimers(comp);
+    const target = comp.state.webFocus;
+    if (target === 'me') return;
+    comp._pan = { x: 0, y: 0 };
+    comp.setState({ webFocus: 'me', webBackId: null, webBack: -Math.PI / 2, webTrail: ['me'] });
+    comp._wt.push(setTimeout(() => play(comp, pathTo(target).slice(1)), 800));
+  }
+
+  /* ---------------------------------------------------------------- web view */
+  const bgInner = (u) =>
+    `<defs><radialGradient id="${u}b" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#3A2C20"/><stop offset="1" stop-color="#17120E"/></radialGradient></defs>` +
+    `<rect width="${W}" height="${H}" fill="url(#${u}b)"/>` +
+    `<g stroke="#D9B88F" fill="none" opacity=".16"><circle cx="${CX}" cy="${CY}" r="50"/><circle cx="${CX}" cy="${CY}" r="98"/><circle cx="${CX}" cy="${CY}" r="158"/><circle cx="${CX}" cy="${CY}" r="215"/>` +
+    '<animateTransform attributeName="transform" type="rotate" from="0 180 220" to="360 180 220" dur="160s" repeatCount="indefinite"/></g>' +
+    `<g stroke="#D9B88F" opacity=".11">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((k) => { const a = (k * Math.PI) / 6; return `<line x1="${CX}" y1="${CY}" x2="${CX + 230 * Math.cos(a)}" y2="${CY + 230 * Math.sin(a)}"/>`; }).join('')}` +
+    '<animateTransform attributeName="transform" type="rotate" from="360 180 220" to="0 180 220" dur="220s" repeatCount="indefinite"/></g>' +
+    [[30, 40, 1.2, 3.1], [320, 60, 1, 2.4], [60, 380, 1.1, 3.6], [300, 400, 1.3, 2.8], [190, 20, 1, 3.3], [20, 220, 1, 2.6], [345, 230, 1.2, 3.9]]
+      .map(([x, y, r, d]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#F6EBD9"><animate attributeName="opacity" values=".15;.9;.15" dur="${d}s" repeatCount="indefinite"/></circle>`).join('');
+
+  const hidden = (id, priv) => { if (GRP[id] || id === 'me' || UNL[id]) return false; const st = stepsOf(id); return st >= 3 || (priv === 'strict' && st >= 2); };
+  const groupArt = (id) => {
+    const g = GRP[id], col = g.priv ? '#4A4238' : TH.DK[TH.hash(id) % 6];
+    return h('svg', { viewBox: '0 0 100 100', style: { display: 'block', width: '100%', height: '100%' }, dangerouslySetInnerHTML: { __html: `<rect width="100" height="100" fill="${col}"/>${iconG(g.ic, '#fff', 52, 24, 24, 1)}` } });
+  };
+  function nodeArt(id, s, priv) {
+    if (GRP[id]) return groupArt(id);
+    const me = id === 'me';
+    const mode = me ? (s.thm.me === 'text' ? 'avatar' : s.thm.me) : hidden(id, priv) ? 'icon' : (s.thm.member === 'text' ? 'avatar' : s.thm.member);
+    return TH.makeArt(mode, 'p', {}, me ? 'me' + s.meVar : P[id].n);
+  }
+
+  function web(s, ctx, comp) {
+    R = ctx.React;
+    UNL = s.webUnlocked || {};
+    comp._pan = comp._pan || { x: 0, y: 0 };
+    const priv = s.webPriv, focus = s.webFocus;
+    const L = layout(focus, s.webBackId, s.webBack);
+    const trailSet = new Set(s.webTrail);
+    const mm = s.thm.member === 'text' ? 'avatar' : s.thm.member;
+    const mem = s.thm.me === 'text' ? 'avatar' : s.thm.me;
+    const u = TH.nid();
+
+    const nodeEl = (id, p) => {
+      const role = p.ring;
+      const k = role === 0 ? 1.5 : role === 1 ? 1 : 0.52;
+      const isG = !!GRP[id], isMe = id === 'me';
+      const st = isG || isMe ? null : stepsOf(id);
+      let shape;
+      if (isG) {
+        const g = GRP[id], col = g.priv ? '#4A4238' : TH.DK[TH.hash(id) % 6];
+        shape = [
+          h('rect', { key: 'r', x: -19, y: -19, width: 38, height: 38, rx: 12, fill: col, stroke: trailSet.has(id) ? '#F2C879' : '#F6EBD9', strokeWidth: trailSet.has(id) ? 3 : 1.5, strokeDasharray: g.priv ? '3 3' : null }),
+          h('g', { key: 'i', dangerouslySetInnerHTML: { __html: iconG(g.ic, '#fff', 22, -11, -11, 1) } })
+        ];
+      } else {
+        const seed = isMe ? 'me' + s.meVar : P[id].n;
+        const pm = isMe ? mem : hidden(id, priv) ? 'icon' : mm;
+        shape = [
+          h('circle', { key: 'c', r: 21, fill: '#2A2118', stroke: isMe || trailSet.has(id) ? '#F2C879' : 'rgba(246,235,217,.55)', strokeWidth: isMe || trailSet.has(id) ? 3 : 1.5 }),
+          h('svg', { key: 'a', x: -18, y: -18, width: 36, height: 36, viewBox: '0 0 100 100', style: { clipPath: 'circle(50% at 50% 50%)' }, dangerouslySetInnerHTML: { __html: TH.personInner(seed, pm) } })
+        ];
+      }
+      const kids = [];
+      if (role === 0) kids.push(h('g', { key: 'pulse', dangerouslySetInnerHTML: { __html: '<circle r="24" fill="none" stroke="#F2C879" stroke-width="1.5" opacity=".6"><animate attributeName="r" values="24;42;24" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="2.6s" repeatCount="indefinite"/></circle><circle r="24" fill="none" stroke="#F2C879" stroke-width="1" opacity=".4"><animate attributeName="r" values="24;54;24" dur="2.6s" begin="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".4;0;.4" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></circle>' } }));
+      kids.push(...shape);
+      if (st != null && role <= 1) {
+        kids.push(h('g', { key: 'bd' }, h('circle', { cx: 15, cy: -15, r: 8, fill: '#F2C879' }), h('text', { x: 15, y: -11.6, textAnchor: 'middle', style: { fontSize: 10, fontWeight: 700, fill: '#2A2118' } }, String(st))));
+      }
+      if (role <= 1) {
+        kids.push(h('text', { key: 'lb', x: 0, y: 36, textAnchor: 'middle', style: { fontSize: 10.5, fontWeight: 600, fill: '#F6EBD9', paintOrder: 'stroke', stroke: '#17120E', strokeWidth: 3, strokeLinejoin: 'round' } }, label(id, priv)));
+      }
+      const go = () => tap(comp, id, p.via);
+      return h('g', {
+        key: id, role: 'button', tabIndex: 0, 'aria-label': label(id, priv) + (st != null ? ', ' + st + '단계' : ''),
+        onClick: go, onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); comp._dragMoved = false; go(); } },
+        style: { transform: `translate(${p.x}px,${p.y}px)`, transition: 'transform .9s cubic-bezier(.22,.8,.2,1), opacity .5s', opacity: role === 2 ? 0.62 : 1, cursor: 'pointer', outline: 'none' }
+      }, h('g', { style: { transform: `scale(${k})`, transition: 'transform .6s', animation: 'wfade .7s ease both' } }, kids));
+    };
+
+    const edgeEls = [], packets = [];
+    L.edges.forEach((e, i) => {
+      const a = L.pos[e.a], b = L.pos[e.b];
+      if (!a || !b) return;
+      const hot = trailSet.has(e.a) && trailSet.has(e.b);
+      edgeEls.push(h('line', { key: `${focus}:${e.a}-${e.b}`, x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: hot ? '#F2C879' : e.ring === 1 ? '#D9B88F' : '#8A7A62', strokeWidth: hot ? 2 : e.ring === 1 ? 1.4 : 0.9, strokeOpacity: hot ? 0.95 : e.ring === 1 ? 0.8 : 0.5, style: { animation: 'wfade .6s ease .5s both' } }));
+      if (e.ring === 1 && i < 8) {
+        packets.push(h('circle', { key: `pk${focus}:${e.b}`, r: 2.4, fill: '#F2C879', style: { animation: 'wfade .5s ease 1s both' } },
+          h('animateMotion', { dur: `${2 + (i % 3) * 0.6}s`, repeatCount: 'indefinite', path: `M${b.x} ${b.y} L${a.x} ${a.y}` })));
+      }
+    });
+    const ids = Object.keys(L.pos).sort((x, y) => ORDER[x] - ORDER[y]);
+    const nodes = ids.map((id) => nodeEl(id, L.pos[id]));
+
+    const down = (e) => { comp._pd = { x: e.clientX, y: e.clientY, px: comp._pan.x, py: comp._pan.y }; comp._dragMoved = false; };
+    const move = (e) => {
+      const d = comp._pd; if (!d) return;
+      const dx = e.clientX - d.x, dy = e.clientY - d.y;
+      if (!comp._dragMoved && Math.abs(dx) + Math.abs(dy) > 7) { comp._dragMoved = true; try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) { /* ignore */ } }
+      if (comp._dragMoved && comp._vp) {
+        const bb = e.currentTarget.getBoundingClientRect(); const k = 1 / Math.min(bb.width / W, bb.height / H);
+        comp._pan = { x: d.px + dx * k, y: d.py + dy * k };
+        comp._vp.style.transition = 'none';
+        comp._vp.style.transform = `translate(${comp._pan.x}px,${comp._pan.y}px)`;
+      }
+    };
+    const up = () => { comp._pd = null; setTimeout(() => { comp._dragMoved = false; }, 60); };
+
+    const canvas = h('svg', {
+      viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: 'xMidYMid meet', role: 'group', 'aria-label': '연결망 지도. 노드를 탭하면 이동하고 드래그하면 둘러볼 수 있어요',
+      style: { display: 'block', width: '100%', height: '100%', touchAction: 'none', cursor: 'grab', userSelect: 'none' },
+      onPointerDown: down, onPointerMove: move, onPointerUp: up, onPointerCancel: up
+    },
+      h('g', { key: 'bg', dangerouslySetInnerHTML: { __html: bgInner(u) } }),
+      h('g', { key: 'vp', ref: (el) => { comp._vp = el; }, style: { transform: 'translate(0px,0px)', transition: 'transform .6s' } }, edgeEls, packets, nodes));
+
+    /* ---- info + trail */
+    const isP = !GRP[focus] && focus !== 'me';
+    const stF = focus === 'me' ? 0 : stepsOf(focus);
+    const path = pathTo(focus);
+    const chain = path.map((id) => label(id, priv)).join(' → ');
+    let title = label(focus, priv), sub = '', pill = '', via = '';
+    if (focus === 'me') { title = '나'; sub = `내 소속 ${STATS.groups}곳 · 바로 아는 사람 ${STATS.direct}명`; pill = '중심'; via = `${STATS.max}단계 안에 ${STATS.total}명이 이어져 있어요. 소속이나 사람을 탭해 타고 가보세요`; }
+    else if (!isP) {
+      const g = GRP[focus]; const n = (MEM[focus] || []).length;
+      sub = g.mine ? `내 소속 · 멤버 ${n}명` : `${stF}단계 너머의 모임`;
+      pill = g.mine ? '내 소속' : g.priv ? '비공개' : '모임';
+      via = g.mine ? '이 소속의 멤버를 탭하면 그 사람의 다른 소속으로 이어져요' : '정확한 멤버 수와 이름은 가려져요';
+    } else {
+      const shown = stF <= 1;
+      sub = shown ? P[focus].r : UNL[focus] ? `${P[focus].r} · 허용된 항목만` : '직업·소속 등 정보는 숨겨져요';
+      pill = UNL[focus] ? '소개 허용' : `${stF}단계`;
+      if (UNL[focus]) via = `${label(path[path.length - 3], priv)}님의 소개로 7일간 열려요`;
+      else if (path.length >= 5) { const vp = path[path.length - 3], gg = path[path.length - 2]; via = `${label(vp, priv)}님을 통해, ‘${label(gg, priv)}’에서 이어져요`; }
+      else via = `같은 ‘${label(path[1], priv)}’ 소속이에요`;
+    }
+    const canProfile = isP && stF <= 1 && /^u\d$/.test(focus);
+    const jst = (s.jump || {})[focus] || 0;
+    const unl = !!UNL[focus];
+    const canJump = isP && stF === 2 && !unl && jst === 0;
+    const hasWait = isP && !unl && (jst === 1 || jst === 2);
+    const jumpBlocked = isP && stF >= 3 && !unl;
+    const kindOf = (id) => (id === 'me' ? '나' : GRP[id] ? (GRP[id].mine ? '소속' : '모임') : `${stepsOf(id)}단계`);
+    const trail = s.webTrail.map((id, i) => ({
+      i: nodeArt(id, s, priv), rad: GRP[id] ? '10px' : '50%', label: label(id, priv), tag: kindOf(id), hash: '#' + (TH.hash(id) % 65536).toString(16).padStart(4, '0'),
+      link: i > 0, last: i === s.webTrail.length - 1,
+      bd: i === s.webTrail.length - 1 ? 'var(--color-accent)' : 'var(--color-divider)',
+      bg: i === s.webTrail.length - 1 ? 'var(--color-accent-100)' : 'var(--color-neutral-100)',
+      go: () => { clearTimers(comp); travel(comp, id); }
+    }));
+    return {
+      canvas, badge: focus === 'me' ? '연결망 · 중심' : GRP[focus] && GRP[focus].mine ? '내 소속' : `나에서 ${stF}${GRP[focus] ? '단계 너머' : '단계'}`,
+      hint: '탭하면 이동 · 드래그하면 둘러보기',
+      privTxt: priv === 'basic' ? '공개 범위 · 기본' : '공개 범위 · 엄격',
+      togglePriv: () => comp.setState((st) => ({ webPriv: st.webPriv === 'basic' ? 'strict' : 'basic' })),
+      info: { i: nodeArt(focus, s, priv), rad: GRP[focus] ? '14px' : '50%', canDemo: focus === 'me', demo: () => demo(comp), title, sub, pill, pathTxt: chain, via, canReplay: focus !== 'me', replay: () => replay(comp), canProfile, profile: () => comp.push({ v: 'profile', id: focus }), canJump, jump: () => comp.setState({ sheet: 'jump' }), hasWait, jumpWait: jst === 1 ? `연결자 ${label(path[path.length - 3], priv)}님 확인 중…` : '상대 확인 중…', jumpBlocked },
+      trail
+    };
+  }
+
+  /* ---------------------------------------------------------------- map */
+  const ME = { x: 158, y: 136 };
+  const KM = 0.09;
+  const AREA = { 성수: [214, 128], 강남: [234, 190], 판교: [268, 255] };
+  const PLACES = [
+    { id: 'pl1', n: '다은 카페', t: '동문 가게 · 카페', area: '성수', x: 222, y: 138, ind: 'F&B', ic: 'coffee', perk: '동문 20% 할인' },
+    { id: 'pl2', n: '오브 브랜딩 스튜디오', t: '동문 가게 · 디자인', area: '성수', x: 200, y: 120, ind: 'IT·디자인', ic: 'camera', perk: '첫 상담 무료', ad: true },
+    { id: 'pl3', n: '한결 법률사무소', t: '동문 사무실 · 법률', area: '강남', x: 246, y: 200, ind: '법률', ic: 'bag', perk: '동문 무료 상담 30분' },
+    { id: 'pl4', n: '블루벤처스', t: '동문 사무실 · 금융', area: '강남', x: 226, y: 182, ind: '금융', ic: 'code', perk: '창업 상담 예약', ad: true }
+  ];
+  const ADS = {
+    'IT·디자인': { t: '오브 스튜디오 · 브랜딩 첫 상담 무료', s: '성수 · 동문 가게', place: 'pl2' },
+    '금융': { t: '블루벤처스 · 동문 창업 상담 예약', s: '강남 · 동문 사무실', place: 'pl4' },
+    'F&B': { t: '동문 가게 기획전 · 다은 카페 20% 할인', s: '성수 · 동문 가게', place: 'pl1' },
+    '법률': { t: '한결 법률사무소 · 동문 무료 상담 30분', s: '강남 · 동문 사무실', place: 'pl3' }
+  };
+  const geo = (p) => {
+    const a = AREA[p.region];
+    if (!a) return { x: null, y: null, km: 325 };
+    const hh = TH.hash(p.id);
+    const x = a[0] + ((hh % 21) - 10) * 1.5, y = a[1] + (((hh >> 5) % 21) - 10) * 1.3;
+    return { x, y, km: Math.round(Math.hypot(x - ME.x, y - ME.y) * KM * 10) / 10 };
+  };
+  const placeKm = (pl) => Math.round(Math.hypot(pl.x - ME.x, pl.y - ME.y) * KM * 10) / 10;
+
+  const BASE = (() => {
+    let b = '<rect width="360" height="300" fill="#EFE6D4"/>';
+    for (let i = 0; i < 48; i++) {
+      const hh = TH.hash('b' + i);
+      b += `<rect x="${(hh % 330) + 4}" y="${((hh >> 8) % 270) + 4}" width="${14 + ((hh >> 4) % 22)}" height="${10 + ((hh >> 12) % 16)}" rx="3" fill="#E5D8BE"/>`;
+    }
+    b += '<ellipse cx="60" cy="235" rx="44" ry="26" fill="#D3DEBF"/><ellipse cx="318" cy="70" rx="34" ry="24" fill="#D3DEBF"/><ellipse cx="108" cy="60" rx="30" ry="16" fill="#D3DEBF"/>';
+    b += '<path d="M0 150 C70 130 120 175 180 160 S300 135 360 150 L360 172 C300 160 240 190 180 182 S70 152 0 172Z" fill="#BBD3DB"/>';
+    b += '<g stroke="#FFFDF7" stroke-width="5" fill="none" stroke-linecap="round"><path d="M0 95 H360 M0 215 H360 M0 268 H360 M95 0 V300 M200 0 V300 M300 0 V300 M0 40 L360 250"/></g>';
+    b += '<g stroke="#FFFDF7" stroke-width="7"><path d="M132 140 V190 M252 140 V190"/></g>';
+    b += '<g font-size="9" fill="#8A7A62" font-weight="600"><text x="112" y="108">마포</text><text x="206" y="110">성수</text><text x="238" y="226">강남</text><text x="272" y="282">판교</text><text x="70" y="166" fill="#6F97A6">한강</text></g>';
+    return b;
+  })();
+
+  const starEl = (on, size) => h('svg', { width: size || 18, height: size || 18, viewBox: '0 0 24 24', fill: on ? 'currentColor' : 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinejoin: 'round', 'aria-hidden': 'true', style: { display: 'block' } }, h('polygon', { points: '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' }));
+
+  const placesFor = (s) => PLACES.filter((pl) =>
+    (!s.ind.length || s.ind.includes(pl.ind)) && (!s.region.length || s.region.includes(pl.area)) &&
+    (!s.favOnly || s.favs[pl.id]) && (s.radius === 0 || placeKm(pl) <= s.radius));
+
+  function finder(s, comp) {
+    const favN = Object.keys(s.favs).filter((k) => s.favs[k]).length;
+    const chip = (l, on, go) => ({ l, on, bg: on ? 'var(--color-accent)' : 'var(--color-neutral-100)', fg: on ? 'var(--color-bg)' : 'var(--color-text)', go });
+    const seg = (l, on, go) => ({ l, on, bg: on ? 'var(--color-text)' : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', go });
+    const map = s.findView === 'map';
+    const ad = s.ind.length ? ADS[s.ind[0]] : null;
+    return {
+      sortChips: [
+        chip('아는 사람 먼저', s.sortBy === 'known', () => comp.setState({ sortBy: 'known' })),
+        chip('가까운 순', s.sortBy === 'near', () => comp.setState({ sortBy: 'near' })),
+        chip('즐겨찾기 ' + favN, s.favOnly, () => comp.setState((st) => ({ favOnly: !st.favOnly, selPin: null, route: null })))
+      ],
+      seg: [
+        seg('목록', !map, () => comp.setState({ findView: 'list', selPin: null, route: null })),
+        seg('지도', map, () => comp.setState({ findView: 'map', sortBy: 'near', selPin: null, route: null }))
+      ],
+      radiusChips: [[3, '3km'], [5, '5km'], [10, '10km'], [0, '전체']].map(([v, l]) => chip(l, s.radius === v, () => comp.setState({ radius: v, selPin: null, route: null }))),
+      banner: ad ? { on: true, t: ad.t, s: ad.s, go: () => comp.setState({ findView: 'map', selPin: ad.place, route: null, sortBy: 'near' }) } : { on: false },
+      notice: { on: !s.adOff, t: '성수 동문 가게 기획전 · 최대 20% 할인', close: () => comp.setState({ adOff: true }) }
+    };
+  }
+
+  function map(s, ctx, comp, people) {
+    R = ctx.React;
+    if (s.findView !== 'map') return { el: null, count: 0, pin: { on: false } };
+    const mm = s.thm.member === 'text' ? 'avatar' : s.thm.member;
+    const items = [];
+    people.forEach((p) => { const g = geo(p); if (g.x != null) items.push({ kind: 'p', id: p.id, x: g.x, y: g.y, km: g.km, p }); });
+    placesFor(s).forEach((pl) => items.push({ kind: 'pl', id: pl.id, x: pl.x, y: pl.y, km: placeKm(pl), pl }));
+    const sel = items.find((it) => it.id === s.selPin);
+    const select = (id) => (e) => { e.stopPropagation(); comp.setState({ selPin: id, route: null }); };
+
+    const markers = items.map((it) => {
+      const on = sel && sel.id === it.id;
+      const fav = !!s.favs[it.id];
+      const common = { key: it.id, role: 'button', tabIndex: 0, style: { cursor: 'pointer', outline: 'none' }, onClick: select(it.id), onKeyDown: (e) => { if (e.key === 'Enter') select(it.id)(e); } };
+      if (it.kind === 'p') {
+        const nm = it.p.n.replace(' ★', '');
+        return h('g', { ...common, 'aria-label': `${nm}, ${it.km}km` },
+          h('circle', { cx: it.x, cy: it.y, r: 17, fill: '#7A6A52', fillOpacity: 0.12, stroke: '#7A6A52', strokeOpacity: 0.55, strokeDasharray: '3 3' }),
+          on ? h('circle', { cx: it.x, cy: it.y, r: 12, fill: 'none', style: { stroke: 'var(--color-accent)', strokeWidth: 2 } }, h('animate', { attributeName: 'r', values: '11;18;11', dur: '1.8s', repeatCount: 'indefinite' })) : null,
+          h('svg', { x: it.x - 9, y: it.y - 9, width: 18, height: 18, viewBox: '0 0 100 100', dangerouslySetInnerHTML: { __html: TH.personInner(nm, mm) } }),
+          h('circle', { cx: it.x, cy: it.y, r: 9.5, fill: 'none', stroke: '#fff', strokeWidth: on ? 2.6 : 1.5 }),
+          fav ? h('g', { transform: `translate(${it.x + 4} ${it.y - 16})`, style: { color: '#E0A13A' } }, h('svg', { width: 11, height: 11, viewBox: '0 0 24 24', fill: '#E0A13A', stroke: '#fff', strokeWidth: 2 }, h('polygon', { points: '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' }))) : null);
+      }
+      const pl = it.pl, col = TH.DK[TH.hash(pl.id) % 6];
+      return h('g', { ...common, 'aria-label': `${pl.n}, ${it.km}km` },
+        pl.ad ? h('circle', { cx: it.x, cy: it.y, r: 12, fill: 'none', stroke: '#E0A13A', strokeWidth: 2 }, h('animate', { attributeName: 'r', values: '12;20;12', dur: '2s', repeatCount: 'indefinite' }), h('animate', { attributeName: 'opacity', values: '.9;0;.9', dur: '2s', repeatCount: 'indefinite' })) : null,
+        on ? h('circle', { cx: it.x, cy: it.y, r: 15, fill: 'none', style: { stroke: 'var(--color-accent)', strokeWidth: 2.5 } }) : null,
+        h('rect', { x: it.x - 10, y: it.y - 10, width: 20, height: 20, rx: 7, fill: col, stroke: pl.ad ? '#E0A13A' : '#fff', strokeWidth: pl.ad ? 2.5 : 1.5 }),
+        h('g', { dangerouslySetInnerHTML: { __html: iconG(pl.ic, '#fff', 12, it.x - 6, it.y - 6, 1) } }),
+        pl.ad ? h('g', null, h('rect', { x: it.x + 5, y: it.y - 17, width: 15, height: 9, rx: 4.5, fill: '#2A2118' }), h('text', { x: it.x + 12.5, y: it.y - 10.2, textAnchor: 'middle', style: { fontSize: 6.5, fontWeight: 700, fill: '#F6EBD9' } }, 'AD')) : null,
+        fav ? h('g', { transform: `translate(${it.x - 15} ${it.y - 16})` }, h('svg', { width: 11, height: 11, viewBox: '0 0 24 24', fill: '#E0A13A', stroke: '#fff', strokeWidth: 2 }, h('polygon', { points: '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' }))) : null);
+    });
+
+    const routeEl = sel && s.route === sel.id
+      ? h('g', { key: 'route', style: { pointerEvents: 'none' } },
+        h('path', { d: `M${ME.x} ${ME.y} Q${(ME.x + sel.x) / 2} ${Math.min(ME.y, sel.y) - 34} ${sel.x} ${sel.y}`, fill: 'none', strokeWidth: 3.5, strokeLinecap: 'round', strokeDasharray: '7 6', style: { stroke: 'var(--color-accent)' } },
+          h('animate', { attributeName: 'stroke-dashoffset', from: '0', to: '-26', dur: '0.9s', repeatCount: 'indefinite' })))
+      : null;
+
+    const meG = h('g', { key: 'me', dangerouslySetInnerHTML: { __html: `<circle cx="${ME.x}" cy="${ME.y}" r="8" style="fill:var(--color-accent)" opacity=".25"><animate attributeName="r" values="8;22;8" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".35;0;.35" dur="2.2s" repeatCount="indefinite"/></circle><circle cx="${ME.x}" cy="${ME.y}" r="7" style="fill:var(--color-accent)" stroke="#fff" stroke-width="2.5"/><text x="${ME.x}" y="${ME.y + 19}" text-anchor="middle" font-size="9" font-weight="700" fill="#2A2118" stroke="#EFE6D4" stroke-width="3" paint-order="stroke">내 위치(대략)</text>` } });
+
+    const radius = s.radius ? h('circle', { key: 'rad', cx: ME.x, cy: ME.y, r: s.radius / KM, fillOpacity: 0.06, strokeOpacity: 0.55, strokeDasharray: '5 4', style: { fill: 'var(--color-accent)', stroke: 'var(--color-accent)', transition: 'r .5s', pointerEvents: 'none' } }) : null;
+
+    const el = h('svg', { viewBox: '0 0 360 300', preserveAspectRatio: 'xMidYMid slice', role: 'group', 'aria-label': '내 주변 지도', style: { display: 'block', width: '100%', height: '100%' }, onClick: () => comp.setState({ selPin: null, route: null }) },
+      h('g', { key: 'base', dangerouslySetInnerHTML: { __html: BASE } }), radius, routeEl, meG, markers);
+
+    let pin = { on: false };
+    if (sel) {
+      const isP = sel.kind === 'p';
+      const fav = !!s.favs[sel.id];
+      const routing = s.route === sel.id;
+      const walk = Math.round((sel.km / 4.5) * 60), transit = Math.round((sel.km / 18) * 60) + 8;
+      const orig = isP ? { n: sel.p.n.replace(' ★', ''), role: sel.p.role } : null;
+      pin = {
+        on: true,
+        i: isP ? TH.makeArt(mm, 'p', {}, orig.n) : h('svg', { viewBox: '0 0 100 100', style: { display: 'block', width: '100%', height: '100%' }, dangerouslySetInnerHTML: { __html: `<rect width="100" height="100" rx="28" fill="${TH.DK[TH.hash(sel.id) % 6]}"/>${iconG(sel.pl.ic, '#fff', 48, 26, 26, 1)}` } }),
+        rad: isP ? '50%' : '14px',
+        title: isP ? orig.n : sel.pl.n,
+        sub: isP ? `${orig.role} · ${sel.p.region} 근처(대략)` : `${sel.pl.t} · ${sel.pl.perk}`,
+        dist: `${sel.km}km`,
+        ad: !isP && !!sel.pl.ad,
+        star: starEl(fav, 20), favLabel: fav ? '즐겨찾기 해제' : '즐겨찾기 추가',
+        fav: () => { comp.setState((st) => ({ favs: { ...st.favs, [sel.id]: !st.favs[sel.id] } })); comp.flash(fav ? '즐겨찾기에서 뺐어요' : '즐겨찾기에 담았어요'); },
+        routeTxt: routing ? '길안내 끄기' : '길안내',
+        route: () => comp.setState({ route: routing ? null : sel.id }),
+        hasRoute: routing, routeInfo: `대중교통 약 ${transit}분 · 도보 약 ${walk}분 (예시)`,
+        openTxt: isP ? '프로필' : '가게 보기',
+        open: () => (isP ? comp.push({ v: 'profile', id: sel.id }) : comp.flash('가게 상세는 준비 중이에요 (예시)'))
+      };
+    }
+    return { el, count: items.length + '곳', pin };
+  }
+
+  function teaser(ctx) {
+    R = ctx.React;
+    const nodes = [[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3], [4, 4, 4]].map(([k]) => { const a = -Math.PI / 2 + (k * 2 * Math.PI) / 5; return [60 + 34 * Math.cos(a), 48 + 34 * Math.sin(a), k]; });
+    const inner = '<defs><radialGradient id="tz" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#4A3828"/><stop offset="1" stop-color="#241B14"/></radialGradient></defs><rect width="120" height="96" fill="url(#tz)"/>' +
+      '<g><animateTransform attributeName="transform" type="rotate" from="0 60 48" to="360 60 48" dur="40s" repeatCount="indefinite"/>' +
+      '<circle cx="60" cy="48" r="34" fill="none" stroke="#D9B88F" opacity=".35"/><circle cx="60" cy="48" r="46" fill="none" stroke="#D9B88F" opacity=".18"/>' +
+      nodes.map(([x, y]) => `<line x1="60" y1="48" x2="${x}" y2="${y}" stroke="#D9B88F" opacity=".6"/>`).join('') +
+      nodes.map(([x, y, k]) => `<circle cx="${x}" cy="${y}" r="6" fill="${TH.DK[k % 6]}" stroke="#F6EBD9" stroke-width="1.5"/>`).join('') + '</g>' +
+      '<circle cx="60" cy="48" r="9" fill="none" stroke="#F2C879" opacity=".6"><animate attributeName="r" values="9;24;9" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="2.6s" repeatCount="indefinite"/></circle>' +
+      '<circle cx="60" cy="48" r="9" fill="#F2C879" stroke="#F6EBD9" stroke-width="2"/>';
+    return { art: h('svg', { viewBox: '0 0 120 96', style: { display: 'block', width: '100%', height: '100%' }, 'aria-hidden': 'true', dangerouslySetInnerHTML: { __html: inner } }), sub: `${STATS.max}단계 안에 ${STATS.total}명이 이어져 있어요` };
+  }
+
+  function jumpVM(s, comp) {
+    const id = s.webFocus;
+    if (s.sheet !== 'jump' || !P[id] || GRP[id]) return { reasons: [], steps: [], rules: [] };
+    const path = pathTo(id), bridge = path[path.length - 3];
+    const used = Object.keys(s.jump || {}).length, remaining = Math.max(0, 3 - used);
+    const reason = s.jumpReason || '커리어 조언';
+    const timers = () => { comp._jt = comp._jt || []; return comp._jt; };
+    const setStage = (n, extra) => comp.setState((st) => Object.assign({ jump: Object.assign({}, st.jump, { [id]: n }) }, extra ? extra(st) : {}));
+    return {
+      bridge: label(bridge, 'basic'), target: label(id, 'basic'), remaining, noSend: remaining <= 0,
+      reasons: ['커리어 조언', '협업 제안', '같은 취미', '안부·재회'].map((l) => ({ l, bg: reason === l ? 'var(--color-accent)' : 'transparent', fg: reason === l ? 'var(--color-bg)' : 'var(--color-text)', bd: reason === l ? 'transparent' : 'var(--color-divider)', go: () => comp.setState({ jumpReason: l }) })),
+      steps: [
+        { n: '1', t: `${label(bridge, 'basic')}님이 확인`, d: '소개해도 되는 사이인지 연결자가 먼저 봐요' },
+        { n: '2', t: '상대가 직접 허용', d: '거절하면 알림 없이 끝나요. 이유와 요청자 이름은 상대만 봐요' },
+        { n: '3', t: '기간 한정으로 열림', d: '상대가 허용한 항목만 7일 동안 보여요' }
+      ],
+      rules: ['하루 3회까지 요청할 수 있어요', '3단계부터는 요청할 수 없어요. 중간 사람을 먼저 거쳐요', '거절이 쌓이면 잠시 요청이 막혀요', '누가 언제 요청했는지 기록이 남아요'],
+      send: () => {
+        if (remaining <= 0) { comp.flash('오늘 요청 횟수를 모두 썼어요'); return; }
+        timers().forEach(clearTimeout); comp._jt = [];
+        setStage(1, () => ({ sheet: null }));
+        comp._jt.push(setTimeout(() => setStage(2), 1700));
+        comp._jt.push(setTimeout(() => { setStage(3, (st) => ({ webUnlocked: Object.assign({}, st.webUnlocked, { [id]: true }) })); comp.flash(`${P[id].n}님이 소개를 허용했어요 · 7일간 열려요`); }, 3600));
+      }
+    };
+  }
+
+  window.WEBMAP = { jumpVM, open, web, finder, map, geo, placesFor, teaser };
+})();
+
+</script>
+<script>
+/* Profile visibility settings (demo). Defaults protect people; every setting only narrows what others can see.
+   Viewer levels: 0 = stranger on the web (trace only), 1 = introduced (jump approved), 2 = same group. */
+(function () {
+  const TH = window.THUMB;
+  const AUD = { group: '같은 소속', intro: '소개 허용자', me: '나만' };
+  const NEED = { group: 2, intro: 1, me: 99 };
+  const DEFAULTS = { name: 'intro', photo: 'intro', work: 'group', groups: 'group', contact: 'me', web: 'trace', jumpOn: true, limit: 3, expire: 7 };
+  const FIELDS = [['name', '이름'], ['photo', '사진'], ['work', '직업·회사'], ['groups', '소속 목록'], ['contact', '연락처']];
+
+  const chip = (l, on, go) => ({ l, on, bg: on ? 'var(--color-accent)' : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', bd: on ? 'transparent' : 'var(--color-divider)', go });
+  const seg = (l, on, go) => ({ l, on, bg: on ? 'var(--color-text)' : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', go });
+
+  function vm(s, ctx, comp) {
+    const R = ctx.React;
+    const p = s.priv;
+    const set = (patch) => comp.setState((st) => ({ priv: Object.assign({}, st.priv, patch) }));
+    const lvl = s.pvView;
+    const see = (k) => (lvl === 1 ? p[k] === 'intro' : lvl === 2 ? p[k] === 'intro' || p[k] === 'group' : false);
+    const mode = s.thm.me === 'text' ? 'avatar' : s.thm.me;
+    const seen = (k) => see(k);
+    const photo = seen('photo') ? TH.makeArt(mode, 'p', {}, 'me' + s.meVar) : TH.makeArt('icon', 'p', {}, 'anon');
+    const hideNote = (k) => (lvl === 0 ? '흔적만 보여요' : p[k] === 'me' ? '나만 볼 수 있어요' : '허용 범위 밖이에요');
+    const rows = [
+      { k: '이름', v: seen('name') ? '정우진' : '정○○', lock: !seen('name'), why: seen('name') ? '' : hideNote('name') },
+      { k: '직업·회사', v: seen('work') ? '브랜드 디자이너 · 오브' : '비공개', lock: !seen('work'), why: seen('work') ? '' : hideNote('work') },
+      { k: '소속', v: seen('groups') ? '경영 08 · 러닝크루 외 2곳' : '소속 이름 비공개', lock: !seen('groups'), why: seen('groups') ? '' : hideNote('groups') },
+      { k: '연락처', v: seen('contact') ? '010-****-0412' : '비공개', lock: !seen('contact'), why: seen('contact') ? '' : hideNote('contact') }
+    ];
+    const traceTxt = p.web === 'off' ? '연결망에서 보이지 않아요' : p.web === 'name' ? '연결망에서 1단계에게 이름이 보여요' : '연결망에서 이름 없는 점으로 보여요';
+    const sw = (on) => ({ sw: on ? 'var(--color-accent)' : 'var(--color-neutral-300)', x: on ? '21px' : '3px' });
+    const views = [['처음 보는 사람', 0], ['소개로 허용된 사람', 1], ['같은 소속', 2]];
+    return {
+      first: !!s.pvFirst,
+      viewSeg: views.map(([l, v]) => seg(l, s.pvView === v, () => comp.setState({ pvView: v }))),
+      prev: { photo, rows, trace: traceTxt, nameBig: seen('name') ? '정우진' : '정○○', lvlTxt: lvl === 0 ? '연결망에서 이렇게 보여요' : lvl === 1 ? `소개가 허용되면 ${p.expire}일 동안 이렇게 보여요` : '같은 소속에게는 이렇게 보여요' },
+      webSeg: [['trace', '흔적만'], ['name', '이름까지'], ['off', '숨김']].map(([v, l]) => seg(l, p.web === v, () => set({ web: v }))),
+      webNote: p.web === 'trace' ? '내가 거쳐 가는 점으로만 보여요. 이름·사진은 가려지고, 경로의 단계 수에만 쓰여요.' : p.web === 'name' ? '나와 1단계로 닿는 사람에게만 이름이 보여요. 그 밖에는 흔적으로만 보여요.' : '연결망에서 내 점이 사라져요. 나를 통하는 경로는 이어지지 않아요.',
+      fields: FIELDS.map(([k, l]) => ({ l, chips: ['group', 'intro', 'me'].map((a) => chip(AUD[a], p[k] === a, () => set({ [k]: a }))) })),
+      jumpOn: Object.assign({ go: () => set({ jumpOn: !p.jumpOn }) }, sw(p.jumpOn)),
+      jumpDetail: !!p.jumpOn,
+      limitChips: [1, 3, 5].map((n) => chip(`${n}회`, p.limit === n, () => set({ limit: n }))),
+      expireChips: [[1, '24시간'], [7, '7일'], [30, '30일']].map(([n, l]) => chip(l, p.expire === n, () => set({ expire: n }))),
+      safety: ['팔로우나 맞팔은 공개 권한이 아니에요. 항목별로 허용한 것만 보여요.', '소개 요청은 연결자와 내가 모두 허용해야 열려요.', '누가 언제 요청했는지 기록이 남고, 차단하면 다시 요청할 수 없어요.'],
+      saveTxt: s.pvFirst ? '저장하고 시작하기' : '저장하기',
+      save: () => { comp.setState({ pvFirst: false }); comp.back(); comp.flash('공개 범위를 저장했어요'); },
+      reset: () => comp.setState({ priv: Object.assign({}, DEFAULTS), pvView: 0 })
+    };
+  }
+
+  window.PRIV = { DEFAULTS, vm };
+})();
+
+</script>
+<script>
+(function(){
+const DCLogic = class { setState(u, cb) { const p = typeof u === 'function' ? u(this.state) : u; if (p) this.state = Object.assign({}, this.state, p); if (this.__update) this.__update(); if (cb) cb(); } };
+
+const COL = {
+  AC: ['var(--color-accent)', 'var(--color-bg)'],
+  A: ['var(--color-accent-300)', 'var(--color-accent-900)'],
+  A2: ['var(--color-accent-200)', 'var(--color-accent-800)'],
+  S: ['var(--color-accent-2-300)', 'var(--color-accent-2-900)'],
+  S4: ['var(--color-accent-2-400)', 'var(--color-accent-2-900)'],
+  N: ['var(--color-neutral-300)', 'var(--color-neutral-900)']
+};
+const col = k => ({ bg: COL[k][0], fg: COL[k][1] });
+const GROUPS = [
+  { id: 'g1', name: '연세 경영 08 동문회', label: '경영 08', short: '08', members: 128, known: 12, region: '신촌', c: 'AC' },
+  { id: 'g2', name: '한강 러닝크루', label: '러닝크루', short: 'RUN', members: 64, known: 5, region: '반포', c: 'S' },
+  { id: 'g3', name: '판교 IT 동문 네트워크', label: 'IT 동문', short: 'IT', members: 412, known: 9, region: '판교', c: 'N' },
+  { id: 'g4', name: '필름사진 모임', label: '필름사진', short: '필름', members: 37, known: 3, region: '을지로', c: 'A2' }
+];
+const PEOPLE = [
+  { id: 'u1', n: '이서연', i: '서', c: 'S4', role: '프로덕트 디자이너 · 토스트랩', ind: 'IT·디자인', region: '성수', groups: ['g1', 'g2'], via: '김민지', viaI: '민', viaC: 'A', mutual: 3, bio: '주말엔 한강에서 뛰고, 평일엔 핀테크 앱을 만들어요. 커리어 고민 나누는 거 좋아해요.' },
+  { id: 'u2', n: '한도윤', i: '도', c: 'A2', role: '백엔드 개발자 · 무브', ind: 'IT·디자인', region: '강남', groups: ['g1', 'g3'], via: '김민지', viaI: '민', viaC: 'A', mutual: 5, bio: '경영학과에서 개발자로 전향했어요. 전향 고민 있으면 편하게 물어보세요.' },
+  { id: 'u3', n: '오하린', i: '하', c: 'N', role: 'UX 리서처 · 프리랜서', ind: 'IT·디자인', region: '성수', groups: ['g2'], via: '박준호', viaI: '준', viaC: 'N', mutual: 2, bio: '인터뷰하고 정리하는 일을 해요. 러닝은 이제 막 5K 입문.' },
+  { id: 'u4', n: '윤재민', i: '재', c: 'A', role: 'CTO · 루프랩', ind: 'IT·디자인', region: '판교', groups: ['g3'], via: '한도윤', viaI: '도', viaC: 'A2', mutual: 4, bio: '루프랩에서 개발팀을 꾸리고 있어요. 동문 추천은 언제나 환영.' },
+  { id: 'u5', n: '정소희', i: '소', c: 'S', role: '브랜드 디자이너 · 오브', ind: 'IT·디자인', region: '성수', groups: ['g4'], via: '최다은', viaI: '다', viaC: 'S', mutual: 1, bio: '필름 카메라 세 대와 함께 다녀요. 출사 같이 가요.' },
+  { id: 'u6', n: '강태오', i: '태', c: 'S4', role: '투자심사역 · 블루벤처스', ind: '금융', region: '강남', groups: ['g1'], via: '김민지', viaI: '민', viaC: 'A', mutual: 6, bio: '초기 스타트업에 투자해요. 동문 창업자 이야기 듣는 걸 좋아합니다.' },
+  { id: 'u7', n: '문유나', i: '유', c: 'A2', role: '셰프 · 유나키친', ind: 'F&B', region: '부산', groups: ['g2'], via: '박준호', viaI: '준', viaC: 'N', mutual: 1, bio: '부산에서 작은 식당을 해요. 광안리 러닝 코스 추천 가능.' },
+  { id: 'u8', n: '서지후', i: '지', c: 'N', role: '변호사 · 법무법인 한결', ind: '법률', region: '강남', groups: ['g1'], via: '강태오', viaI: '태', viaC: 'S4', mutual: 2, bio: '스타트업 계약, 투자 관련 일을 주로 해요.' }
+];
+const POSTS = [
+  { id: 'p1', g: 'g1', who: '김민지', i: '민', c: 'A', time: '2시간 전', text: '홈커밍 장소 확정! 신촌 그 호프집 기억나죠? 21일 7시에 봐요.', likes: 24, cm: 8, img: true },
+  { id: 'p2', g: 'g2', who: '박준호', i: '준', c: 'N', time: '5시간 전', text: '토요일 아침 7시 반포 10K 갑니다. 처음 오시는 분은 5K 코스도 있어요.', likes: 15, cm: 3, img: true },
+  { id: 'p3', g: 'g1', who: '최다은', i: '다', c: 'S', time: '어제', text: '성수에 작은 카페 열었어요. 동문은 음료 20% 할인해드릴게요!', likes: 41, cm: 12, img: true },
+  { id: 'p4', g: 'g3', who: '윤재민', i: '재', c: 'A', pid: 'u4', time: '어제', text: '루프랩에서 프론트엔드 개발자 채용 중입니다. 동문 추천 환영해요.', likes: 9, cm: 2 },
+  { id: 'p5', g: 'g4', who: '정소희', i: '소', c: 'S', pid: 'u5', time: '2일 전', text: '을지로 출사 사진 공유해요. 다음엔 익선동 가볼까요?', likes: 18, cm: 5, img: true }
+];
+const EVENTS = [
+  { id: 'e1', g: 'g1', d: '21', m: '11월', dow: '금', time: '19:00', title: '경영 08 연말 홈커밍', where: '신촌 · 호프 그날', knownN: 12, going: 58, desc: '졸업하고 15년, 다 같이 모여요. 회비 3만원, 골드 이상 멤버는 1만원 할인돼요.' },
+  { id: 'e2', g: 'g2', d: '23', m: '11월', dow: '일', time: '07:00', title: '반포 10K 정기런', where: '반포한강공원', knownN: 5, going: 21, desc: '5K·10K 두 코스로 나눠 뛰고, 끝나면 근처에서 브런치 먹어요.' },
+  { id: 'e3', g: 'g3', d: '27', m: '11월', dow: '목', time: '19:30', title: 'IT 동문 네트워킹 나이트', where: '판교 · 루프랩 라운지', knownN: 7, going: 44, desc: '동문 라이트닝 토크 4개, 그리고 자유 네트워킹. 간단한 음식이 준비돼요.' },
+  { id: 'e4', g: 'g4', d: '30', m: '11월', dow: '일', time: '14:00', title: '필름 출사 — 을지로', where: '을지로3가역 1번 출구', knownN: 2, going: 9, desc: '을지로 골목을 2시간 걸어요. 참석자에게 필름 1롤 드려요.' }
+];
+const PERKS = [
+  { id: 'k1', t: '회원 할인', s: '제휴처 48곳', ic: 'tag', c: 'A2', desc: '멤버십 카드 QR을 보여주면 바로 할인돼요.' },
+  { id: 'k2', t: '공동구매', s: '진행 중 2건', ic: 'cart', c: 'S', desc: '동문이 추천하고, 인원이 모이면 함께 사요.' },
+  { id: 'k3', t: '굿즈샵', s: '소속별 굿즈', ic: 'gift', c: 'N', desc: '우리 모임 굿즈를 사전 주문으로 만들어요.' },
+  { id: 'k4', t: '동문 가게', s: '동문이 운영', ic: 'coffee', c: 'A', desc: '동문이 운영하는 가게를 응원해요.' }
+];
+const DEALS = {
+  k1: [{ pct: '15%', t: '피트니스 W', s: '러닝크루 멤버 전용' }, { pct: '10%', t: '북카페 서재', s: '전 회원' }, { pct: '1만', t: '홈커밍 회비', s: '골드 이상' }],
+  k2: [],
+  k3: [{ pct: 'NEW', t: '경영 08 후드 집업', s: '사전 주문 · 12월 발송' }, { pct: '', t: '러닝크루 캡', s: '재고 있음' }],
+  k4: [{ pct: '20%', t: '다은 카페 · 성수', s: '최다은 (경영 08)' }, { pct: '10%', t: '유나키친 · 부산', s: '문유나 (러닝크루)' }]
+};
+const BUYS = [
+  { id: 'b1', t: '동문 와이너리 레드 6병', s: '32% 할인 · D-3', goal: 50, now: 42 },
+  { id: 'b2', t: '제주 감귤 10kg', s: '산지직송 · D-6', goal: 30, now: 12 }
+];
+const KINDS = ['학교', '직장', '동네', '동호회'];
+const CANDS = {
+  '학교': [{ id: 'c1', name: '한빛초 2004 졸업 동창회', label: '한빛초 04', short: '04', members: 296, known: 6, region: '광주', c: 'S4', cohortLabel: '졸업 연도', cohorts: ['2004 졸업', '2003 졸업', '2005 졸업'] }, { id: 'c2', name: '한빛중 2007 졸업', label: '한빛중 07', short: '07', members: 188, known: 3, region: '광주', c: 'A2', cohortLabel: '졸업 연도', cohorts: ['2007 졸업', '2006 졸업', '2008 졸업'] }],
+  '직장': [{ id: 'c3', name: '루프랩 알럼나이', label: '루프랩', short: 'LOOP', members: 73, known: 4, region: '판교', c: 'N', cohortLabel: '재직 구분', cohorts: ['재직 중', '퇴사 후'] }],
+  '동네': [{ id: 'c4', name: '성수동 이웃 모임', label: '성수 이웃', short: '성수', members: 154, known: 2, region: '성수', c: 'A', cohortLabel: '구분', cohorts: ['거주', '근무'] }],
+  '동호회': [{ id: 'c5', name: '주말 북한산 등산', label: '북한산', short: '산', members: 89, known: 1, region: '북한산', c: 'S', cohortLabel: '참여 방식', cohorts: ['정기', '게스트'] }]
+};
+const REASONS = ['커리어 조언', '협업 제안', '같이 운동해요', '그냥 반가워서'];
+const REPLIES = ['좋아요! 시간 맞춰볼게요 :)', '오 반가워요. 다음 주 어때요?', '네네, 편하게 연락 주세요!', 'ㅎㅎ 그럼 그때 봬요'];
+const initThreads = () => [
+  { id: 'minji', title: '김민지', i: '민', c: 'A', sub: '경영 08', unread: false, msgs: [{ who: '민지', t: '우진아 홈커밍 올 거지? 자리 잡아둘게' }] },
+  { id: 'run', title: '한강 러닝크루', i: 'RUN', c: 'S', sub: '그룹', unread: false, msgs: [{ who: '준호', t: '토요일 7시 반포! 늦으면 5K 코스로 합류' }] }
+];
+const initState = () => ({ onb: true, tab: 'home', stack: [], sheet: null, liked: {}, rsvp: { e2: true }, region: [], ind: [], known: true, q: '', gtab: '소식', reason: '커리어 조언', introText: '', sent: {}, accepted: {}, threads: initThreads(), draft: '', chatDraft: '', myPosts: [], toast: null, joined: {}, typing: false, cardFull: false, thm: { me: 'avatar', member: 'photo', group: 'photo', event: 'photo' }, styScope: 'me', meVar: 0, added: [], addKind: '학교', addPick: null, addCohort: null, addStep: 1, addVerifying: false, addShare: { name: true, work: true, cross: false }, sortBy: 'known', findView: 'list', radius: 0, favs: {}, favOnly: false, selPin: null, route: null, adOff: false, webFocus: 'me', webBackId: null, webBack: -1.5707963267948966, webTrail: ['me'], webPriv: 'basic', priv: { ...window.PRIV.DEFAULTS }, pvView: 0, pvFirst: false, jump: {}, jumpReason: '커리어 조언', webUnlocked: {} });
+
+class Component extends DCLogic {
+  state = initState();
+  componentWillUnmount() { clearTimeout(this._t); clearTimeout(this._v); (this._wt || []).forEach(clearTimeout); }
+  openAdd() { this.setState(s => ({ stack: [...s.stack, { v: 'add' }], sheet: null, addStep: 1, addPick: null, addCohort: null, addVerifying: false, addShare: { name: true, work: true, cross: false } })); }
+  verifyAdd() {
+    if (this.state.addVerifying) return;
+    this.setState({ addVerifying: true });
+    this.flash('실명·기수 확인 중…');
+    this._v = setTimeout(() => {
+      const tp = this.state.stack[this.state.stack.length - 1];
+      if (!tp || tp.v !== 'add') return;
+      this.setState({ addVerifying: false, addStep: 3 });
+      this.flash('확인됐어요');
+    }, 1300);
+  }
+  finishAdd() {
+    const c = this.state.addPick;
+    if (!c) return;
+    this.setState(s => ({ added: [...s.added, { ...c, id: 'gx' + (s.added.length + 1), kind: this.state.addKind }], stack: [], tab: 'groups', addPick: null, sheet: null }));
+    this.flash(c.label + '이 내 소속 지도에 추가됐어요');
+  }
+  push(v) { this.setState(s => ({ stack: [...s.stack, v], sheet: null, gtab: v.v === 'group' ? '소식' : s.gtab })); }
+  back() { (this._wt || []).forEach(clearTimeout); this.setState(s => ({ stack: s.stack.slice(0, -1), sheet: null })); }
+  go(tab) { this.setState(s => ({ tab, stack: [], sheet: null, onb: false, cardFull: false, threads: tab === 'msg' ? s.threads : s.threads })); }
+  flash(t) { this.setState({ toast: t }); clearTimeout(this._t); this._t = setTimeout(() => this.setState({ toast: null }), 2400); }
+  openChat(id) {
+    const p = PEOPLE.find(x => x.id === id);
+    this.setState(s => {
+      let threads = s.threads.map(t => t.id === id ? { ...t, unread: false } : t);
+      if (p && !threads.find(t => t.id === id)) threads = [{ id, title: p.n, i: p.i, c: p.c, sub: '1:1', unread: false, msgs: [{ sys: true, t: `${p.via}님을 통해 아는 사이예요` }] }, ...threads];
+      return { threads, stack: [...s.stack, { v: 'chat', id }], sheet: null };
+    });
+  }
+  sendChat() {
+    const top = this.state.stack[this.state.stack.length - 1];
+    const txt = this.state.chatDraft.trim();
+    if (!txt || !top) return;
+    const id = top.id;
+    const add = m => this.setState(s => ({ threads: s.threads.map(t => t.id === id ? { ...t, msgs: [...t.msgs, m] } : t) }));
+    add({ me: true, t: txt });
+    this.setState({ chatDraft: '', typing: true });
+    setTimeout(() => {
+      const th = this.state.threads.find(t => t.id === id);
+      const who = th ? th.title.split(',').pop().trim().slice(-2) : '';
+      add({ who, t: REPLIES[Math.floor(Math.random() * REPLIES.length)] });
+      this.setState({ typing: false });
+    }, 1400);
+  }
+  sendIntro() {
+    const top = this.state.stack[this.state.stack.length - 1];
+    const p = PEOPLE.find(x => x.id === top.id);
+    this.setState(s => ({ sent: { ...s.sent, [p.id]: true }, sheet: null, introText: '' }));
+    this.flash(`${p.via}님에게 소개 요청을 보냈어요`);
+    setTimeout(() => {
+      this.setState(s => ({
+        accepted: { ...s.accepted, [p.id]: true },
+        threads: [{ id: p.id, title: `${p.via.slice(1)}, ${p.n.slice(1)}`, i: p.i, c: p.c, sub: '소개방', unread: true, msgs: [
+          { sys: true, t: `${p.via}님이 소개를 수락했어요` },
+          { who: p.via.slice(1), t: `${p.n.slice(1)}아, 우진이는 내 08 동기! ${s.reason} 얘기 나누고 싶대 :)` },
+          { who: p.n.slice(1), t: '안녕하세요 우진님! 반가워요 :)' }
+        ] }, ...s.threads.filter(t => t.id !== p.id)]
+      }));
+      this.flash(`${p.via}님이 소개를 수락했어요 · 메시지 확인`);
+    }, 3000);
+  }
+  renderVals() {
+    const s = this.state;
+    const P = { shield: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>', home: '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>', users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>', search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>', msg: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>', card: '<rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/>', bell: '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>', left: '<path d="m15 18-6-6 6-6"/>', plus: '<path d="M5 12h14M12 5v14"/>', send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>', pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>', bag: '<rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>', heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>', tag: '<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r=".5"/>', cart: '<circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>', gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/>', coffee: '<path d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/>' };
+    const mk = (n, z, fill) => React.createElement('svg', { width: z, height: z, viewBox: '0 0 24 24', fill: fill || 'none', stroke: 'currentColor', strokeWidth: 2.75, strokeLinecap: 'round', strokeLinejoin: 'round', style: { display: 'block' }, dangerouslySetInnerHTML: { __html: P[n] } });
+    const i = {}; Object.keys(P).forEach(k => { i[k] = mk(k, 20); i[k + 'S'] = mk(k, 14); });
+    i.sendS = mk('send', 18);
+    const top = s.stack[s.stack.length - 1];
+    const allG = [...GROUPS, ...s.added];
+    const TH = window.THUMB;
+    const WM = window.WEBMAP;
+    const { T, sty } = TH.build(s, { React, PEOPLE, GROUPS, EVENTS, COL }, this);
+    const v = top ? top.v : null;
+    const is = { onb: s.onb, home: !s.onb && !v && s.tab === 'home', groups: !s.onb && !v && s.tab === 'groups', find: !s.onb && !v && s.tab === 'find', msgs: !s.onb && !v && s.tab === 'msg', card: !s.onb && !v && s.tab === 'card', group: v === 'group', profile: v === 'profile', chat: v === 'chat', event: v === 'event', perk: v === 'perk', add: v === 'add', web: v === 'web', privacy: v === 'privacy', cardFull: s.cardFull };
+    const openP = id => () => this.push({ v: 'profile', id });
+    const openG = id => () => this.push({ v: 'group', id });
+    const openE = id => () => this.push({ v: 'event', id });
+    const gName = id => allG.find(g => g.id === id);
+    const allPosts = [...s.myPosts, ...POSTS];
+    const postVM = p => { const lk = !!s.liked[p.id]; return { ...p, ...col(p.c), group: gName(p.g).label, likes: p.likes + (lk ? 1 : 0), likeC: lk ? 'var(--color-accent-700)' : 'var(--color-neutral-700)', heart: mk('heart', 14, lk ? 'currentColor' : 'none'), like: () => this.setState(st => ({ liked: { ...st.liked, [p.id]: !st.liked[p.id] } })), openWho: p.pid ? openP(p.pid) : () => {}, openGroup: openG(p.g), img: !!p.img, photo: p.img ? TH.sceneArt(TH.POST_SCENE[p.id] || TH.SCENE_OF[p.g] || 'town') : null }; };
+    const evVM = e => { const on = !!s.rsvp[e.id]; return { ...e, ...col(e.g === 'g2' ? 'S' : e.g === 'g3' ? 'N' : e.g === 'g4' ? 'A2' : 'A'), going: e.going + (on ? 1 : 0), status: on ? '참석' : '미정', stBg: on ? 'var(--color-accent-2)' : 'var(--color-bg)', stFg: on ? 'var(--color-bg)' : 'var(--color-neutral-700)', open: openE(e.id) }; };
+    const unreadN = s.threads.filter(t => t.unread).length;
+    const tabsDef = [['home', 'home', '홈'], ['groups', 'users', '소속'], ['find', 'search', '찾기'], ['msg', 'msg', '메시지'], ['card', 'card', '멤버십']];
+    const tabs = tabsDef.map(([k, ic, l]) => ({ ic: i[ic], l, c: s.tab === k ? 'var(--color-accent-700)' : 'var(--color-neutral-600)', w: s.tab === k ? 700 : 400, go: () => this.go(k), dot: k === 'msg' && unreadN > 0 }));
+    const groupList = allG.map(g => { const n = allPosts.filter(p => p.g === g.id).length; return { ...g, ...col(g.c), ring: g.id === 'g1' || g.id === 'g2' || g.id.startsWith('gx') ? 'var(--color-accent)' : 'var(--color-neutral-300)', newTxt: n ? `새 글 ${n}` : '', open: openG(g.id) }; });
+    const ne = evVM(EVENTS[0]);
+    // group
+    let grp = {}, groupFeed = [], groupMembers = [], groupEvents = [], groupDeals = [];
+    if (v === 'group') {
+      const g = allG.find(x => x.id === top.id); grp = { ...g, ...col(g.c) };
+      groupFeed = allPosts.filter(p => p.g === g.id).map(postVM);
+      groupMembers = PEOPLE.filter(p => p.groups.includes(g.id)).map(p => ({ ...p, ...col(p.c), viaTxt: `${p.via}님과 아는 사이`, open: openP(p.id) }));
+      groupEvents = EVENTS.filter(e => e.g === g.id).map(evVM);
+      groupDeals = [...DEALS.k4, ...DEALS.k1].slice(0, 3);
+    }
+    if (v === 'perk' || s.sheet === 'compose') { const g = top && top.v === 'group' ? allG.find(x => x.id === top.id) : null; if (g) grp = { ...g, ...col(g.c) }; }
+    const gt = { feed: s.gtab === '소식', members: s.gtab === '멤버', events: s.gtab === '모임', perks: s.gtab === '혜택' };
+    const gtabs = ['소식', '멤버', '모임', '혜택'].map(l => ({ l, bg: s.gtab === l ? 'var(--color-text)' : 'var(--color-neutral-100)', fg: s.gtab === l ? 'var(--color-bg)' : 'var(--color-text)', go: () => this.setState({ gtab: l }) }));
+    // find
+    const chip = (arr, key, l) => { const on = arr.includes(l); return { l, bg: on ? (key === 'region' ? 'var(--color-accent)' : 'var(--color-accent-2)') : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', bd: on ? 'transparent' : 'var(--color-divider)', go: () => this.setState(st => ({ [key]: st[key].includes(l) ? st[key].filter(x => x !== l) : [...st[key], l] })) }; };
+    const regionChips = ['성수', '강남', '판교', '부산'].map(l => chip(s.region, 'region', l));
+    const indChips = ['IT·디자인', '금융', 'F&B', '법률'].map(l => chip(s.ind, 'ind', l));
+    const q = s.q.trim();
+    let found = PEOPLE.filter(p => (!q || (p.n + p.role).includes(q)) && (!s.region.length || s.region.includes(p.region)) && (!s.ind.length || s.ind.includes(p.ind)));
+    if (s.favOnly) found = found.filter(p => s.favs[p.id]);
+    if (s.findView === 'map' && s.radius) found = found.filter(p => WM.geo(p).km <= s.radius);
+    found = s.sortBy === 'near' ? [...found].sort((a, b) => WM.geo(a).km - WM.geo(b).km) : [...found].sort((a, b) => b.mutual - a.mutual);
+    found = found.map(p => ({ ...p, ...col(p.c), viaTxt: `${p.via}님 통해 아는 사이`, distTxt: s.sortBy === 'near' ? ` · ${WM.geo(p).km}km` : '', stateTxt: s.accepted[p.id] ? '연결됨' : s.sent[p.id] ? '요청 중' : `공통 ${p.mutual}`, open: openP(p.id) }));
+    const fx = WM.finder(s, this);
+    const mp = WM.map(s, { React }, this, found);
+    // profile
+    let pr = {};
+    if (top && (v === 'profile')) {
+      const p = PEOPLE.find(x => x.id === top.id);
+      const st = s.accepted[p.id] ? 'acc' : s.sent[p.id] ? 'sent' : 'none';
+      pr = { ...p, ...col(p.c), viaBg: COL[p.viaC][0], viaFg: COL[p.viaC][1], tags: p.groups.map(g => gName(g).label), shared: p.groups.length,
+        primaryTxt: st === 'acc' ? '소개방 열기' : st === 'sent' ? `${p.via}님 답을 기다리는 중…` : `${p.via}님에게 소개 부탁`,
+        pBg: st === 'sent' ? 'var(--color-neutral-300)' : 'var(--color-accent)', pFg: st === 'sent' ? 'var(--color-neutral-800)' : 'var(--color-bg)',
+        primary: () => st === 'acc' ? this.openChat(p.id) : st === 'sent' ? this.flash('아직 응답 전이에요') : this.setState({ sheet: 'intro' }),
+        dm: () => this.openChat(p.id), web: () => WM.open(this, p.id), hasWeb: /^u\d$/.test(p.id) };
+    }
+    const reasons = REASONS.map(l => { const on = s.reason === l; return { l, bg: on ? 'var(--color-accent)' : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', bd: on ? 'transparent' : 'var(--color-divider)', go: () => this.setState({ reason: l }) }; });
+    // messages
+    const threadList = s.threads.map(t => { const last = t.msgs[t.msgs.length - 1]; return { ...t, ...col(t.c), last: (last.me ? '나: ' : '') + last.t, open: () => this.openChat(t.id) }; });
+    let chatMsgs = [], chatTitle = '';
+    if (v === 'chat') {
+      const th = s.threads.find(t => t.id === top.id);
+      chatTitle = th ? `${th.title} · ${th.sub}` : '';
+      chatMsgs = (th ? th.msgs : []).map(m => m.sys ? { t: m.t, al: 'center', bg: 'var(--color-accent-2-100)', fg: 'var(--color-accent-2-800)', fs: '11px', pad: '6px 14px', showWho: false } : m.me ? { t: m.t, al: 'flex-end', bg: 'var(--color-accent)', fg: 'var(--color-bg)', fs: '14px', pad: '10px 14px', showWho: false } : { t: m.t, who: m.who, al: 'flex-start', bg: 'var(--color-neutral-100)', fg: 'var(--color-text)', fs: '14px', pad: '10px 14px', showWho: true });
+    }
+    // event
+    let ev = {};
+    if (v === 'event') { const e = EVENTS.find(x => x.id === top.id); const on = !!s.rsvp[e.id]; ev = { ...evVM(e), groupName: gName(e.g).name + ' 모임', btn: on ? '참석 취소' : '참석할래요', bBg: on ? 'var(--color-neutral-300)' : 'var(--color-accent)', bFg: on ? 'var(--color-text)' : 'var(--color-bg)', toggle: () => { this.setState(st => ({ rsvp: { ...st.rsvp, [e.id]: !st.rsvp[e.id] } })); this.flash(on ? '참석을 취소했어요' : '참석 완료! 캘린더에 추가했어요'); } }; }
+    // perks
+    const perkList = PERKS.map(k => ({ ...k, ...col(k.c), ic: i[k.ic], open: () => this.push({ v: 'perk', id: k.id }) }));
+    let buys = [], deals = [], perkDesc = '', perkTitle = '';
+    if (v === 'perk') {
+      const k = PERKS.find(x => x.id === top.id); perkDesc = k.desc; perkTitle = k.t;
+      deals = DEALS[k.id].map(d => ({ ...d, cta: k.id === 'k3' ? '주문' : '쿠폰', use: () => this.flash(k.id === 'k3' ? `${d.t} 사전 주문했어요` : `${d.t} 쿠폰을 카드에 담았어요`) }));
+      if (k.id === 'k2') buys = BUYS.map(b => { const on = !!s.joined[b.id]; const now = b.now + (on ? 1 : 0); return { ...b, art: TH.productArt(b.id), now, pct: Math.round(now / b.goal * 100) + '%', btn: on ? '참여 중 · 취소' : '나도 참여', bBg: on ? 'var(--color-accent-2-200)' : 'var(--color-accent-2-800)', bFg: on ? 'var(--color-accent-2-900)' : 'var(--color-bg)', join: () => { this.setState(st => ({ joined: { ...st.joined, [b.id]: !st.joined[b.id] } })); this.flash(on ? '참여를 취소했어요' : '공동구매에 참여했어요'); } }; });
+    }
+    let ad = {};
+    if (v === 'add') {
+      const pick = s.addPick;
+      const chipSt = (on, accent) => ({ bg: on ? (accent || 'var(--color-accent)') : 'transparent', fg: on ? 'var(--color-bg)' : 'var(--color-text)', bd: on ? 'transparent' : 'var(--color-divider)' });
+      const kinds = KINDS.map(l => ({ l, ...chipSt(s.addKind === l), go: () => this.setState({ addKind: l, addPick: null }) }));
+      const cands = CANDS[s.addKind].map(c => ({ ...c, ...col(c.c), bd: pick && pick.id === c.id ? 'var(--color-accent)' : 'transparent', pick: () => this.setState({ addPick: c, addCohort: c.cohorts[0] }) }));
+      const cohorts = pick ? pick.cohorts.map(l => ({ l, ...chipSt(s.addCohort === l, 'var(--color-accent-2)'), go: () => this.setState({ addCohort: l }) })) : [];
+      const TG = [['name', '이름 공개', '소속 멤버에게 실명이 보여요'], ['work', '업종·지역 공개', '찾기에서 업종과 지역으로 검색돼요'], ['cross', '다른 소속 멤버에게 이 소속 보이기', '꺼 두면 다른 모임 사람은 이 소속을 알 수 없어요']];
+      const toggles = TG.map(([k, l, d]) => { const on = !!s.addShare[k]; return { l, d, on, sw: on ? 'var(--color-accent)' : 'var(--color-neutral-300)', x: on ? '21px' : '3px', go: () => this.setState(st => ({ addShare: { ...st.addShare, [k]: !st.addShare[k] } })) }; });
+      ad = {
+        dots: [1, 2, 3].map(n => ({ bg: n <= s.addStep ? 'var(--color-accent)' : 'var(--color-neutral-300)' })),
+        stepTxt: s.addStep + '/3 · ' + ['소속 찾기', '실명·기수 확인', '공개 범위'][s.addStep - 1],
+        s1: s.addStep === 1, s2: s.addStep === 2, s3: s.addStep === 3,
+        kinds, cands, noPick: !pick, next1: () => { if (pick) this.setState({ addStep: 2 }); },
+        pickName: pick ? pick.name : '', cohortLabel: pick ? pick.cohortLabel : '', cohorts,
+        verifying: s.addVerifying, verifyTxt: s.addVerifying ? '확인 중…' : '실명·기수 인증하기', verify: () => this.verifyAdd(),
+        toggles, finishTxt: (pick ? pick.label : '') + ' 소속으로 연결하기', finish: () => this.finishAdd()
+      };
+    }
+    const tierNow = 8 + Object.values(s.rsvp).filter(Boolean).length - 1;
+    const tierClamp = Math.min(10, Math.max(0, tierNow));
+    let backTitle = '';
+    if (v === 'group') backTitle = grp.label;
+    else if (v === 'profile') backTitle = '프로필';
+    else if (v === 'chat') backTitle = chatTitle;
+    else if (v === 'event') backTitle = '모임';
+    else if (v === 'perk') backTitle = perkTitle;
+    else if (v === 'add') backTitle = '소속 추가';
+    else if (v === 'web') backTitle = '연결망';
+    else if (v === 'privacy') backTitle = '공개 범위';
+    const curKey = s.onb ? 'onb' : v === 'add' ? 'add' : v === 'web' ? 'web' : v === 'privacy' ? 'privacy' : v === 'profile' ? 'profile' : v === 'group' ? 'group' : v ? '' : (s.tab === 'find' && s.findView === 'map') ? 'map' : s.tab;
+    const J = [['onb', '초대 · 온보딩', () => this.setState({ onb: true, stack: [], sheet: null, cardFull: false })], ['home', '홈', () => this.go('home')], ['groups', '소속 · 모임', () => this.go('groups')], ['group', '그룹 상세 (경영 08)', () => { this.go('groups'); setTimeout(() => this.push({ v: 'group', id: 'g1' })); }], ['find', '찾기 · 디렉터리', () => { this.go('find'); this.setState({ findView: 'list', sortBy: 'known' }); }], ['map', '찾기 · 지도 · 광고', () => { this.go('find'); this.setState({ findView: 'map', sortBy: 'near', selPin: null, route: null }); }], ['profile', '프로필 · 소개 요청', () => { this.go('find'); setTimeout(() => this.push({ v: 'profile', id: 'u1' })); }], ['msg', '메시지', () => this.go('msg')], ['add', '소속 추가 · 인증', () => { this.go('groups'); setTimeout(() => this.openAdd()); }], ['web', '연결망 · 거미줄', () => { this.go('home'); setTimeout(() => WM.open(this)); }], ['privacy', '공개 범위 설정', () => { this.go('home'); setTimeout(() => this.push({ v: 'privacy' })); }], ['card', '멤버십 · 혜택', () => this.go('card')]];
+    const jumps = J.map(([k, l, go], ix) => ({ n: String(ix + 1).padStart(2, '0'), l, go, bg: curKey === k ? 'var(--color-text)' : 'var(--color-neutral-100)', fg: curKey === k ? 'var(--color-bg)' : 'var(--color-text)' }));
+    return {
+      i, is, tabs, jumps, toast: s.toast, hasBack: !s.onb && !!v, backTitle, back: () => this.back(),
+      showTabs: !s.onb && (!v || v === 'group'), statusColor: s.cardFull ? 'var(--color-bg)' : 'var(--color-text)',
+      reset: () => { clearTimeout(this._t); this.setState(initState()); },
+      accept: () => { this.setState({ onb: false, tab: 'home', stack: [{ v: 'privacy' }], pvFirst: true, pvView: 0, sheet: null }); this.flash('경영 08에 들어왔어요. 반가워요!'); },
+      acceptMore: () => { this.setState({ onb: false, tab: 'groups' }); this.openAdd(); },
+      goFind: () => this.go('find'), goGroups: () => this.go('groups'), goCard: () => this.go('card'),
+      bell: () => this.flash('새 알림: 서연님이 러닝크루에 가입했어요'), connect: () => this.openAdd(),
+      openCard: () => this.setState({ cardFull: true }), closeCard: () => this.setState({ cardFull: false }),
+      groupCount: allG.length, me: T({ id: 'me', who: '정우진', i: '우', ...col('AC') }, 'p'), groupList: groupList.map(g => T(g, 'g')), nextEvent: ne, homeFeed: allPosts.slice(0, 4).map(postVM).map(f => T(f, 'p')), eventList: EVENTS.map(evVM).map(e => T(e, 'e')),
+      grp: T(grp, 'g'), gt, gtabs, groupFeed: groupFeed.map(f => T(f, 'p')), groupFeedEmpty: v === 'group' && groupFeed.length === 0, groupMembers: groupMembers.map(p => T(p, 'p')), groupEvents: groupEvents.map(e => T(e, 'e')), groupDeals,
+      q: s.q, onQ: e => this.setState({ q: e.target.value }), toggleKnown: () => this.setState(st => ({ known: !st.known })), knownBg: s.known ? 'var(--color-accent)' : 'transparent', knownFg: s.known ? 'var(--color-bg)' : 'var(--color-text)',
+      pv: v === 'privacy' ? window.PRIV.vm(s, { React }, this) : { prev: { rows: [] }, viewSeg: [], webSeg: [], fields: [], limitChips: [], expireChips: [], safety: [], jumpOn: {} }, jp: WM.jumpVM(s, this), openPrivacy: () => this.push({ v: 'privacy' }),
+      fx, mp, mapOn: s.findView === 'map', web: v === 'web' ? WM.web(s, { React }, this) : { info: {}, trail: [] }, openWeb: () => WM.open(this), webTeaser: WM.teaser({ React }),
+      regionChips, indChips, found: found.map(p => T(p, 'p')), findCount: found.length, foundEmpty: found.length === 0,
+      pr: T(pr, 'p'), reasons, introText: s.introText, onIntro: e => this.setState({ introText: e.target.value }), sendIntro: () => this.sendIntro(),
+      sty, openStyle: () => this.setState({ sheet: 'style' }), sheet: { on: !!s.sheet, intro: s.sheet === 'intro', compose: s.sheet === 'compose', style: s.sheet === 'style', jump: s.sheet === 'jump' }, closeSheet: () => this.setState({ sheet: null }),
+      openCompose: () => this.setState({ sheet: 'compose' }), draft: s.draft, draftEmpty: !s.draft.trim(), onDraft: e => this.setState({ draft: e.target.value }),
+      post: () => { if (!s.draft.trim()) return; const id = 'my' + Date.now(); this.setState(st => ({ myPosts: [{ id, g: top.id, who: '정우진', i: '우', c: 'AC', time: '방금', text: st.draft.trim(), likes: 0, cm: 0 }, ...st.myPosts], draft: '', sheet: null, gtab: '소식' })); this.flash('소식을 올렸어요'); },
+      threadList: threadList.map(t => t.id === 'run' ? T({ ...t, id: 'g2' }, 'g') : T(t, 'p')), chatMsgs, typing: s.typing && v === 'chat', chatDraft: s.chatDraft, onChatDraft: e => this.setState({ chatDraft: e.target.value }), onChatKey: e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing) this.sendChat(); }, sendChat: () => this.sendChat(),
+      ev: T(ev, 'e'), ad, perkList, buys, deals, perkDesc, tierNow: tierClamp, tierLeft: 10 - tierClamp, tierPct: tierClamp * 10 + '%'
+    };
+  }
+}
+
+window.__Component = Component;
+})();
+
+</script>
+<script>
+/* Standalone runner: renders the prototype template without the design canvas, behind a password + period gate. */
+(function () {
+  const h = React.createElement;
+  const Frag = React.Fragment;
+
+  /* ------------------------------------------------------ template renderer */
+  const HOLE = /\{\{\s*([^}]+?)\s*\}\}/g;
+  const WHOLE = /^\{\{\s*([^}]+?)\s*\}\}$/;
+  const EV = {};
+  ['onClick', 'onChange', 'onInput', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'onFocus', 'onBlur', 'onSubmit', 'onDoubleClick', 'onScroll', 'onMouseEnter', 'onMouseLeave', 'onPointerDown', 'onPointerMove', 'onPointerUp'].forEach((n) => { EV[n.toLowerCase()] = n; });
+  const ATTR = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', readonly: 'readOnly', maxlength: 'maxLength', autofocus: 'autoFocus', colspan: 'colSpan', rowspan: 'rowSpan' };
+  const BOOL = { disabled: 1, checked: 1, readonly: 1, hidden: 1, autofocus: 1, selected: 1, multiple: 1 };
+  const VOID = { input: 1, br: 1, hr: 1, img: 1 };
+
+  const lookup = (path, scope, vals) => {
+    const parts = path.split('.');
+    let cur = parts[0] in scope ? scope : vals;
+    for (let i = 0; i < parts.length; i += 1) { if (cur == null) return undefined; cur = cur[parts[i]]; }
+    return cur;
+  };
+  const attrVal = (str, scope, vals) => {
+    const m = WHOLE.exec(str);
+    if (m) return lookup(m[1], scope, vals);
+    return str.replace(HOLE, (_, p) => { const v = lookup(p, scope, vals); return v == null || v === false ? '' : String(v); });
+  };
+  const styleCache = {};
+  const parseStyle = (str) => {
+    if (styleCache[str]) return styleCache[str];
+    const out = {}; let depth = 0, cur = '';
+    const flush = () => {
+      const i = cur.indexOf(':');
+      if (i > 0) {
+        const k = cur.slice(0, i).trim(), v = cur.slice(i + 1).trim();
+        if (k && v) out[k.indexOf('--') === 0 ? k : k.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = v;
+      }
+      cur = '';
+    };
+    for (let i = 0; i < str.length; i += 1) {
+      const c = str[i];
+      if (c === '(') depth += 1; else if (c === ')') depth -= 1;
+      if (c === ';' && depth === 0) flush(); else cur += c;
+    }
+    flush();
+    styleCache[str] = out;
+    return out;
+  };
+  const hoverProps = (hv) => ({
+    onMouseEnter: (e) => { const el = e.currentTarget; el.__hp = {}; Object.keys(hv).forEach((k) => { el.__hp[k] = el.style[k]; el.style[k] = hv[k]; }); },
+    onMouseLeave: (e) => { const el = e.currentTarget; if (el.__hp) Object.keys(el.__hp).forEach((k) => { el.style[k] = el.__hp[k]; }); el.__hp = null; }
+  });
+
+  function renderNode(node, scope, vals, key) {
+    if (node.nodeType === 3) {
+      const t = node.nodeValue;
+      if (!t.trim() && t.indexOf('\n') >= 0) return null;
+      if (t.indexOf('{{') < 0) return t;
+      const parts = []; let last = 0, m;
+      HOLE.lastIndex = 0;
+      while ((m = HOLE.exec(t))) {
+        if (m.index > last) parts.push(t.slice(last, m.index));
+        const v = lookup(m[1], scope, vals);
+        if (v != null && v !== false && v !== true) parts.push(v);
+        last = m.index + m[0].length;
+      }
+      if (last < t.length) parts.push(t.slice(last));
+      return parts.length === 1 ? parts[0] : h(Frag, { key }, ...parts);
+    }
+    if (node.nodeType !== 1) return null;
+    const tag = node.tagName.toLowerCase();
+    if (tag === 'helmet') return null;
+    if (tag === 'sc-if') {
+      const v = attrVal(node.getAttribute('value') || '', scope, vals);
+      if (!v) return null;
+      return h(Frag, { key }, ...kids(node, scope, vals));
+    }
+    if (tag === 'sc-for') {
+      const list = attrVal(node.getAttribute('list') || '', scope, vals) || [];
+      const as = node.getAttribute('as') || 'item';
+      return h(Frag, { key }, ...list.map((item, i) => h(Frag, { key: i }, ...kids(node, Object.assign({}, scope, { [as]: item }), vals))));
+    }
+    const props = { key };
+    let hover = null;
+    for (let i = 0; i < node.attributes.length; i += 1) {
+      const a = node.attributes[i]; const name = a.name.toLowerCase();
+      if (name.indexOf('hint-') === 0) continue;
+      if (name === 'style-hover') { hover = parseStyle(a.value); continue; }
+      let val = a.value.indexOf('{{') >= 0 ? attrVal(a.value, scope, vals) : a.value;
+      if (name === 'style') { props.style = parseStyle(String(val == null ? '' : val)); continue; }
+      if (name.indexOf('on') === 0 && EV[name]) { props[EV[name]] = val; continue; }
+      if (BOOL[name] && val === '') val = true;
+      props[ATTR[name] || a.name] = val;
+    }
+    if (hover) Object.assign(props, hoverProps(hover));
+    if (VOID[tag]) return h(tag, props);
+    return h(tag, props, ...kids(node, scope, vals));
+  }
+  function kids(node, scope, vals) {
+    const out = [];
+    node.childNodes.forEach((c, i) => { const r = renderNode(c, scope, vals, i); if (r != null) out.push(r); });
+    return out;
+  }
+
+  /* ------------------------------------------------------------------ app */
+  function Demo({ tpl }) {
+    const [, force] = React.useState(0);
+    const ref = React.useRef(null);
+    if (!ref.current) { ref.current = new window.__Component(); ref.current.__update = () => force((x) => x + 1); }
+    React.useEffect(() => () => { const c = ref.current; if (c && c.componentWillUnmount) c.componentWillUnmount(); }, []);
+    const vals = ref.current.renderVals();
+    return h(Frag, null, ...kids(tpl, {}, vals));
+  }
+
+  /* ----------------------------------------------------------------- gate */
+  const GH = { owner: 'arcosfrends', repo: 'cosmos', path: 'gate-config.js' };
+  let CFG = null;
+  const enc = new TextEncoder();
+  const hex = (buf) => Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+  async function derive(pw, salt, iter) {
+    const key = await crypto.subtle.importKey('raw', enc.encode(pw), 'PBKDF2', false, ['deriveBits']);
+    return hex(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: enc.encode(salt), iterations: iter || 100000 }, key, 256));
+  }
+  const rand = (n, alpha) => { const a = new Uint32Array(n); crypto.getRandomValues(a); return Array.from(a).map((x) => alpha[x % alpha.length]).join(''); };
+  const ALPHA = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const fmt = (iso) => { const d = new Date(iso); return `${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`; };
+  const windowState = () => { const n = Date.now(); if (n < Date.parse(CFG.from)) return 'early'; if (n > Date.parse(CFG.to)) return 'late'; return 'ok'; };
+  const store = { get() { try { return JSON.parse(sessionStorage.getItem('cosmos-gate')); } catch (_) { return null; } }, set(v) { try { sessionStorage.setItem('cosmos-gate', JSON.stringify(v)); } catch (_) { /* ignore */ } }, del() { try { sessionStorage.removeItem('cosmos-gate'); } catch (_) { /* ignore */ } } };
+  const admitToken = (t) => { if (!t) return null; if (t.r === 'admin' && t.h === CFG.admin) return { ok: true, role: 'admin' }; if (t.r === 'user' && t.h === CFG.user && windowState() === 'ok') return { ok: true, role: 'user' }; return null; };
+
+  const card = { padding: '16px', borderRadius: 24, background: 'var(--color-neutral-100)' };
+  const lab = { fontSize: 12, fontWeight: 700, margin: '14px 0 6px' };
+  const chipSt = (on) => ({ padding: '8px 14px', borderRadius: 999, cursor: 'pointer', font: '600 13px var(--font-body)', border: '1px solid ' + (on ? 'transparent' : 'var(--color-divider)'), background: on ? 'var(--color-accent)' : 'transparent', color: on ? 'var(--color-bg)' : 'var(--color-text)' });
+
+  function Admin({ onClose, onApplied }) {
+    const [userPw, setUserPw] = React.useState('');
+    const [adminPw, setAdminPw] = React.useState('');
+    const [preset, setPreset] = React.useState('1w');
+    const [token, setToken] = React.useState('');
+    const [busy, setBusy] = React.useState(false);
+    const [msg, setMsg] = React.useState('');
+    const [out, setOut] = React.useState('');
+    const presets = [['1d', '1일'], ['1w', '1주'], ['1m', '1달']];
+
+    const save = async () => {
+      if (busy) return;
+      if (userPw.length < 8) { setMsg('접속 비밀번호는 8자 이상으로 정해 주세요.'); return; }
+      if (adminPw && adminPw.length < 10) { setMsg('관리자 비밀번호는 10자 이상으로 정해 주세요.'); return; }
+      setBusy(true); setMsg(''); setOut('');
+      try {
+        const from = new Date(); const to = new Date(from);
+        if (preset === '1d') to.setDate(to.getDate() + 1); else if (preset === '1w') to.setDate(to.getDate() + 7); else to.setMonth(to.getMonth() + 1);
+        const userSalt = rand(16, '0123456789abcdef');
+        const next = { v: 2, iter: 100000, userSalt, user: await derive(userPw, userSalt), adminSalt: CFG.adminSalt, admin: CFG.admin, from: from.toISOString(), to: to.toISOString() };
+        if (adminPw) { next.adminSalt = rand(16, '0123456789abcdef'); next.admin = await derive(adminPw, next.adminSalt); }
+        const text = 'window.__GATE = ' + JSON.stringify(next) + ';\n';
+        if (!token) { setOut(text); setMsg('토큰이 없어서 파일 내용만 만들었어요. 아래 내용을 gate-config.js에 붙여 넣어 저장소에 올리면 적용돼요.'); setBusy(false); return; }
+        const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${GH.path}`;
+        const hd = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' };
+        const cur = await fetch(url, { headers: hd });
+        let sha; if (cur.ok) sha = (await cur.json()).sha; else if (cur.status !== 404) throw new Error('저장소를 읽지 못했어요 (' + cur.status + '). 토큰 권한을 확인해 주세요.');
+        const put = await fetch(url, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, hd), body: JSON.stringify({ message: 'update access settings', content: btoa(text), sha }) });
+        if (!put.ok) throw new Error('저장하지 못했어요 (' + put.status + '). 토큰에 Contents 쓰기 권한이 있는지 확인해 주세요.');
+        CFG = next; store.set({ r: 'admin', h: CFG.admin }); setToken(''); setUserPw(''); setAdminPw('');
+        setMsg(`저장했어요. 1~2분 뒤 새 비밀번호가 적용돼요. 허용 기간: ${fmt(next.from)} ~ ${fmt(next.to)}`);
+        onApplied();
+      } catch (e) { setOut(''); setMsg(String(e.message || e)); }
+      setBusy(false);
+    };
+    const inp = { type: 'text', className: 'input', autoComplete: 'off' };
+    return h('div', { style: { position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(32,30,29,.55)', display: 'grid', placeItems: 'center', padding: 14, overflowY: 'auto' } },
+      h('div', { role: 'dialog', 'aria-label': '관리자 설정', style: { width: 'min(440px,100%)', maxHeight: '94vh', overflowY: 'auto', padding: 22, borderRadius: 28, background: 'var(--color-bg)', boxShadow: 'var(--shadow-lg)' } },
+        h('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center' } }, h('div', { style: { fontFamily: 'var(--font-heading)', fontSize: 22 } }, '접속 설정'), h('button', { className: 'btn btn-secondary', onClick: onClose, style: { padding: '6px 14px' } }, '닫기')),
+        h('div', { style: { fontSize: 12, color: 'var(--color-neutral-700)', margin: '6px 0 4px', lineHeight: 1.5 } }, `지금 설정: ${fmt(CFG.from)} ~ ${fmt(CFG.to)}`),
+        h('div', { style: lab }, '새 접속 비밀번호 (8자 이상)'),
+        h('div', { style: { display: 'flex', gap: 6 } }, h('input', Object.assign({ value: userPw, 'aria-label': '새 접속 비밀번호', onChange: (e) => setUserPw(e.target.value), placeholder: '직접 입력하거나 생성' }, inp)), h('button', { className: 'btn btn-secondary', onClick: () => setUserPw(rand(10, ALPHA)), style: { flex: 'none', padding: '6px 14px' } }, '생성')),
+        h('div', { style: lab }, '접속 허용 기간 (저장하는 순간부터 시작)'),
+        h('div', { style: { display: 'flex', gap: 6 } }, ...presets.map(([v, l]) => h('button', { key: v, onClick: () => setPreset(v), 'aria-pressed': preset === v, style: chipSt(preset === v) }, l))),
+        h('div', { style: lab }, '관리자 비밀번호 재설정 (바꿀 때만, 10자 이상)'),
+        h('input', Object.assign({ value: adminPw, 'aria-label': '새 관리자 비밀번호', onChange: (e) => setAdminPw(e.target.value), placeholder: '비워 두면 그대로' }, inp)),
+        h('div', { style: lab }, 'GitHub 토큰 (저장소에 바로 반영할 때)'),
+        h('input', { type: 'password', className: 'input', autoComplete: 'off', value: token, 'aria-label': 'GitHub 토큰', onChange: (e) => setToken(e.target.value), placeholder: '비워 두면 파일 내용만 만들어요' }),
+        h('div', { style: { fontSize: 11, color: 'var(--color-neutral-600)', marginTop: 6, lineHeight: 1.5 } }, '토큰은 이 브라우저 화면에만 있다가 저장 후 지워지고, 어디에도 보관되지 않아요.'),
+        msg ? h('div', { role: 'status', style: Object.assign({}, card, { marginTop: 14, fontSize: 12.5, lineHeight: 1.55, fontWeight: 600 }) }, msg) : null,
+        out ? h('textarea', { readOnly: true, className: 'input', value: out, onFocus: (e) => e.target.select(), style: { marginTop: 8, borderRadius: 16, fontSize: 11, minHeight: 110, fontFamily: 'ui-monospace,Menlo,monospace' } }) : null,
+        h('button', { className: 'btn btn-primary btn-block', disabled: busy, onClick: save, style: { padding: '14px 0', fontSize: 15, marginTop: 14 } }, busy ? '저장 중…' : '저장하고 적용')));
+  }
+
+  function Gate({ tpl }) {
+    const [role, setRole] = React.useState(null);
+    const [pw, setPw] = React.useState('');
+    const [msg, setMsg] = React.useState('');
+    const [busy, setBusy] = React.useState(false);
+    const [fails, setFails] = React.useState(0);
+    const [panel, setPanel] = React.useState(false);
+    const [, tick] = React.useState(0);
+
+    React.useEffect(() => { const a = admitToken(store.get()); if (a) setRole(a.role); else store.del(); }, []);
+    React.useEffect(() => {
+      if (role !== 'user') return undefined;
+      const id = setInterval(() => { if (windowState() !== 'ok') { store.del(); setRole(null); setMsg('시연 기간이 끝났어요.'); } }, 20000);
+      return () => clearInterval(id);
+    }, [role]);
+
+    const submit = async (e) => {
+      e.preventDefault();
+      if (busy || !pw) return;
+      setBusy(true);
+      if (fails >= 5) await new Promise((r) => setTimeout(r, 4000));
+      try {
+        const ha = await derive(pw, CFG.adminSalt, CFG.iter);
+        if (ha === CFG.admin) { store.set({ r: 'admin', h: ha }); setRole('admin'); setMsg(''); setPw(''); setBusy(false); return; }
+        const hu = await derive(pw, CFG.userSalt, CFG.iter);
+        if (hu === CFG.user) {
+          const w = windowState();
+          if (w === 'ok') { store.set({ r: 'user', h: hu }); setRole('user'); setMsg(''); setPw(''); }
+          else if (w === 'early') setMsg(`아직 열리지 않았어요. ${fmt(CFG.from)} 부터 볼 수 있어요.`);
+          else setMsg(`시연 기간이 끝났어요. (${fmt(CFG.to)} 까지)`);
+        } else { setFails((n) => n + 1); setMsg('비밀번호가 맞지 않아요.'); }
+      } catch (_) { setMsg('이 브라우저에서는 열 수 없어요. 다른 브라우저로 시도해 주세요.'); }
+      setBusy(false);
+    };
+
+    if (role) {
+      return h(Frag, null,
+        h(Demo, { tpl }),
+        role === 'admin' ? h('div', { style: { position: 'fixed', left: 12, bottom: 12, padding: '10px 12px', borderRadius: 16, background: '#2E2B25', color: '#F5EAD8', fontSize: 11, lineHeight: 1.5, zIndex: 50, maxWidth: 250 } },
+          h('b', null, '관리자 모드'), h('br'), `허용 기간 ${fmt(CFG.from)} ~ ${fmt(CFG.to)}`, h('br'),
+          h('button', { onClick: () => setPanel(true), style: { marginTop: 6, padding: '6px 12px', borderRadius: 999, border: 'none', background: '#C67139', color: '#F5EAD8', font: '600 12px var(--font-body)', cursor: 'pointer' } }, '접속 설정')) : null,
+        panel ? h(Admin, { onClose: () => setPanel(false), onApplied: () => tick((x) => x + 1) }) : null);
+    }
+    return h('div', { style: { minHeight: '100vh', display: 'grid', placeItems: 'center', padding: 20, background: 'var(--color-bg)' } },
+      h('form', { onSubmit: submit, style: { width: 'min(380px,100%)', padding: '36px 28px', borderRadius: 32, background: 'var(--color-neutral-100)', boxShadow: 'var(--shadow-lg)', textAlign: 'center' } },
+        h('div', { style: { fontFamily: 'var(--font-heading)', fontSize: 34, lineHeight: 1.1 } }, 'cosmos'),
+        h('div', { style: { fontSize: 13, color: 'var(--color-neutral-700)', margin: '10px 0 22px', lineHeight: 1.6 } }, '흩어진 사람들이 링크로 이어져 하나의 우주가 되는 곳', h('br'), '데모 체험용 페이지예요. 전달받은 비밀번호를 입력해 주세요.'),
+        h('input', { type: 'password', className: 'input', value: pw, autoComplete: 'off', 'aria-label': '비밀번호', placeholder: '비밀번호', onChange: (e) => setPw(e.target.value), style: { textAlign: 'center' } }),
+        msg ? h('div', { role: 'alert', style: { marginTop: 12, fontSize: 12.5, color: 'var(--color-accent-700)', fontWeight: 600, lineHeight: 1.5 } }, msg) : null,
+        h('button', { type: 'submit', className: 'btn btn-primary btn-block', disabled: busy || !pw, style: { padding: '13px 0', fontSize: 15 } }, busy ? '확인 중…' : '입장'),
+        h('div', { style: { marginTop: 18, fontSize: 11, color: 'var(--color-neutral-600)', lineHeight: 1.5 } }, '이 화면은 예시 데이터로 구성된 시연 버전입니다.')));
+  }
+
+  /* ---------------------------------------------------------------- mount */
+  function fit() {
+    const s = Math.min(1, (window.innerHeight - 24) / 828, (window.innerWidth - 12) / 406);
+    document.documentElement.style.setProperty('--ps', String(Math.max(0.4, s)));
+  }
+  fit(); window.addEventListener('resize', fit);
+  const tpl = document.getElementById('dc-tpl').content;
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  const loadCfg = () => new Promise((res, rej) => { const el = document.createElement('script'); el.src = 'gate-config.js?t=' + Date.now(); el.onload = () => res(window.__GATE); el.onerror = rej; document.head.appendChild(el); });
+  loadCfg().then((c) => { CFG = c; root.render(h(Gate, { tpl })); }).catch(() => {
+    root.render(h('div', { style: { minHeight: '100vh', display: 'grid', placeItems: 'center', padding: 24, textAlign: 'center', color: 'var(--color-neutral-700)' } }, '설정 파일을 불러오지 못했어요. 잠시 뒤 다시 열어 주세요.'));
+  });
+})();
+
+</script>
+</body>
+</html>
